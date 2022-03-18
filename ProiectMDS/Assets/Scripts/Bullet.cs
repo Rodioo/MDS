@@ -11,8 +11,7 @@ public class Bullet : MonoBehaviour
     private void checkMenuHit(Collision2D col)
     {
         Transform textTransform = col.gameObject.transform.parent;
-        SpriteRenderer characterSprite = GameObject.Find("Ninja_idle").GetComponent<SpriteRenderer>();
-        
+                
         //Main Menu Choices
         if (textTransform.name == "NewGame_Text")
         {
@@ -32,6 +31,8 @@ public class Bullet : MonoBehaviour
             int volume = Int32.Parse(volume_text.text.Split(':')[1]);
             if (volume > 0)
                 volume--;
+            PlayerPrefs.SetFloat("volume", volume);
+            AudioListener.volume = PlayerPrefs.GetFloat("volume");
             volume_text.text = "Volume:" + volume;
         }
         else if (textTransform.name == "Volume+")
@@ -40,6 +41,8 @@ public class Bullet : MonoBehaviour
             int volume = Int32.Parse(volume_text.text.Split(':')[1]);
             if (volume < 10)
                 volume++;
+            PlayerPrefs.SetFloat("volume", volume);
+            AudioListener.volume = PlayerPrefs.GetFloat("volume");
             volume_text.text = "Volume:" + volume;
         }
         else if (textTransform.name == "Brightness-")
@@ -92,9 +95,8 @@ public class Bullet : MonoBehaviour
         }
         else if(textTransform.name == "Confirm_Text")
         {
-            string characterSpriteName = isNinja ? "Ninja_1" : "Spider_1";
-            
-           
+            //De modificat caracterul (scos prefab-ul de ninja si adaugat cel de archer)
+
             GameObject mainMenu = textTransform.parent.parent.Find("MainMenu").gameObject;
             GameObject switchMenu = textTransform.parent.parent.Find("SwitchMenu").gameObject;
             switchMenu.SetActive(false);
