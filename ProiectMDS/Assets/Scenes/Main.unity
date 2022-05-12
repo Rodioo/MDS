@@ -354,7 +354,8 @@ MonoBehaviour:
   firePoint: {fileID: 48384556}
   shurikenPrefab: {fileID: 8214246055790939148, guid: 50ecfa15fffa9d53e9fb6f0bb3c245b0, type: 3}
   bulletForce: 5
-  fireSpeed: 5
+  fireRate: 0.5
+  nextFire: 0
 --- !u!4 &525892713 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8520626139255663642, guid: f2ebffac3313d6c2dbd4f6fba34d9529, type: 3}

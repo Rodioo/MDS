@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Shooting : MonoBehaviour
 {
     public Animator animator;
@@ -11,16 +10,18 @@ public class Shooting : MonoBehaviour
     public GameObject shurikenPrefab;
 
     public float bulletForce = 5f;
-    public float fireSpeed = 5f;
+    public float fireRate = 1f;
+    public float nextFire = 0f;
 
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButton("Fire1") && Time.time > nextFire)
         {
-            Shoot();
+            nextFire = Time.time + fireRate;
             animator.SetBool("IsShooting", true);
+            Shoot();
         }
-        else if(Input.GetButtonUp("Fire1"))
+        else
         {
             animator.SetBool("IsShooting", false);
         }
