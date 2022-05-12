@@ -25,10 +25,13 @@ TextureImporter:
     second: Shuriken_2
   - first:
       213: -2423230811885516303
-    second: sprites_7
+    second: Arrow
   - first:
       213: 1211998406744890917
     second: Ninja_3
+  - first:
+      213: 6155212226941906339
+    second: Archer
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -277,33 +280,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_7
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 100
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f948c85a64fe5ed0800000000000000
-      internalID: -2423230811885516303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Ninja_3
       rect:
         serializedVersion: 2
-        x: 8
+        x: 4
         y: 68
-        width: 117
+        width: 121
         height: 86
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -314,6 +296,48 @@ TextureImporter:
       bones: []
       spriteID: 52e5e562122e1d010800000000000000
       internalID: 1211998406744890917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Archer
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 294
+        width: 47
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad6300a8e4bb6550800000000000000
+      internalID: 6155212226941906339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 221
+        width: 20
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f948c85a64fe5ed0800000000000000
+      internalID: -2423230811885516303
       vertices: []
       indices: 
       edges: []
