@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637881642338714320
+      ticks: 637881672730702073
     m_Hash: 4097660443
   m_LockFileStatus:
     m_FilePath: D:/UnityProjects/MDS/MDS/ProiectMDS/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637881642338724322
+      ticks: 637881672730712016
     m_Hash: 1202315582
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

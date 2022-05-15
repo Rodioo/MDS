@@ -37,7 +37,13 @@ public class Enemy1 : MonoBehaviour
     }
 
     void moveCharacter(Vector2 direction)
-    {
-        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    {   if(direction.x!=0 && direction.y!=0)
+        {
+            rb.MovePosition((Vector2)transform.position + (direction * moveSpeed/2 * Time.deltaTime));
+        }
+        else
+        {
+            rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        }
     }
 }
