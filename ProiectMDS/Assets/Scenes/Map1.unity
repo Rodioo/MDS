@@ -754,6 +754,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8724920707042059548, guid: 4d0b56d5cc5b48f4683b441407fc3513, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8724920708139399718, guid: 4d0b56d5cc5b48f4683b441407fc3513, type: 3}
       propertyPath: m_Name
       value: Archer
