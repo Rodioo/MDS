@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3181085934863044275}
   m_Layer: 0
   m_Name: Spider_1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   player: {fileID: 0}
-  moveSpeed: 10
+  moveSpeed: 8
 --- !u!50 &5197573931737134616
 Rigidbody2D:
   serializedVersion: 4

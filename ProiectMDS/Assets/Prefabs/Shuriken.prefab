@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1553979518345803477}
   - component: {fileID: 3630677811910071552}
   - component: {fileID: -2919601723466972092}
+  - component: {fileID: -4033492155404873307}
   - component: {fileID: 6191080159614504391}
   m_Layer: 0
   m_Name: Shuriken
@@ -156,6 +157,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c158eebe1653564daaf982785272ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4033492155404873307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8214246055790939148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0af3db87b203b0469924f8d9331e0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &6191080159614504391
