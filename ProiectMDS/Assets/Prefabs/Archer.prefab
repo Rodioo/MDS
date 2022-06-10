@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8724920707042059549}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.07, y: -0.02, z: 0}
+  m_LocalPosition: {x: 0.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8724920708139399722}
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8724920707042059548}
   arrowPrefab: {fileID: 4037366000511379642, guid: b49512bbe0339124fab10da39bbba28a, type: 3}
-  bulletForce: 8
+  bulletForce: 9
   bulletDamage: 15
   fireRate: 1
   nextFire: 0
@@ -199,6 +199,6 @@ MonoBehaviour:
   rb: {fileID: 8724920708139399720}
   cam: {fileID: 0}
   hp: 100
-  healthBarScript: {fileID: 3029481378199442986, guid: 7561d08494814494c90c87d446dbf710, type: 3}
+  healthBarScript: {fileID: 0}
   gold: 0
-  currencyScript: {fileID: 7930065801039590733, guid: d68d472cb9438994cab7159f4042a553, type: 3}
+  currencyScript: {fileID: 0}
