@@ -179,7 +179,7 @@ MonoBehaviour:
   firePoint: {fileID: 8724920707042059548}
   arrowPrefab: {fileID: 4037366000511379642, guid: b49512bbe0339124fab10da39bbba28a, type: 3}
   bulletForce: 8
-  damage: 15
+  bulletDamage: 15
   fireRate: 1
   nextFire: 0
   rot: {x: 0, y: 0, z: 0, w: 0}
@@ -198,3 +198,7 @@ MonoBehaviour:
   moveSpeed: 6
   rb: {fileID: 8724920708139399720}
   cam: {fileID: 0}
+  hp: 100
+  healthBarScript: {fileID: 3029481378199442986, guid: 7561d08494814494c90c87d446dbf710, type: 3}
+  gold: 0
+  currencyScript: {fileID: 7930065801039590733, guid: d68d472cb9438994cab7159f4042a553, type: 3}
