@@ -10,6 +10,7 @@ public class ShootingNinja : MonoBehaviour
     public GameObject shurikenPrefab;
 
     public float bulletForce = 5f;
+    public int bulletDamage = 10;
     public float fireRate = 1f;
     public float nextFire = 0f;
 

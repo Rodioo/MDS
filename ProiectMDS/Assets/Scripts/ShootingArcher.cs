@@ -8,6 +8,7 @@ public class ShootingArcher : MonoBehaviour
     public GameObject arrowPrefab;
 
     public float bulletForce = 5f;
+    public int bulletDamage = 15;
     public float fireRate = 1f;
     public float nextFire = 0f;
     public Quaternion rot = new Quaternion();
