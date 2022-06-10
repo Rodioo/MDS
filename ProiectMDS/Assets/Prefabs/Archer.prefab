@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 8724920708139399723}
   - component: {fileID: 8724920708139399720}
   - component: {fileID: 5004591871842759728}
-  - component: {fileID: 8724920708139399721}
   - component: {fileID: 8724920708139399725}
+  - component: {fileID: 8724920708139399721}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Player
@@ -164,21 +164,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47, y: 0.43}
   m_EdgeRadius: 0
---- !u!114 &8724920708139399721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8724920708139399718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627bf095afb849d2f9274dd9af4ed751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 6
-  rb: {fileID: 8724920708139399720}
-  cam: {fileID: 0}
 --- !u!114 &8724920708139399725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +179,22 @@ MonoBehaviour:
   firePoint: {fileID: 8724920707042059548}
   arrowPrefab: {fileID: 4037366000511379642, guid: b49512bbe0339124fab10da39bbba28a, type: 3}
   bulletForce: 8
+  damage: 15
   fireRate: 1
   nextFire: 0
   rot: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8724920708139399721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724920708139399718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627bf095afb849d2f9274dd9af4ed751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 6
+  rb: {fileID: 8724920708139399720}
+  cam: {fileID: 0}
