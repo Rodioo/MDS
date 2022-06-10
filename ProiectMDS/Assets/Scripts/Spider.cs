@@ -6,7 +6,7 @@ public class Spider : MonoBehaviour
 {
     public Animator animator;
 
-    public Transform player;
+    private Transform player;
     private Rigidbody2D rb;
     private Vector2 movement;
     public float moveSpeed = 1f;
@@ -17,6 +17,7 @@ public class Spider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = this.GetComponent<Rigidbody2D>();
         spiderGold = Random.Range(1, 6);
     }
