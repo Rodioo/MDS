@@ -28,10 +28,13 @@ public class enemy2Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
             Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Bullet"))
+            Destroy(gameObject);
         //if (!collision.gameObject.CompareTag("Enemy"))
-         //   Destroy(gameObject);
-        //if (collision.gameObject.name == "HitBox")
-           // MenuCollision.checkMenuHit(collision);
+        //   Destroy(gameObject);
+        if (collision.gameObject.name == "HitBox")
+            //MenuCollision.checkMenuHit(collision);
+            Destroy(gameObject);
     }
 
 

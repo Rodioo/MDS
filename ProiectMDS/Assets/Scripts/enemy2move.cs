@@ -20,6 +20,9 @@ public class enemy2move : MonoBehaviour
 
     private Transform player;
 
+    public int hp = 18;
+    public int damage = 20;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +57,36 @@ public class enemy2move : MonoBehaviour
         }
 
        
+    }
+
+    private int getPlayerDamage(Collision2D collision)
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player.name == "Ninja")
+        {
+            ShootingNinja script = player.GetComponent<ShootingNinja>();
+            return script.bulletDamage;
+        }
+        if (player.name == "Archer")
+        {
+            ShootingArcher script = player.GetComponent<ShootingArcher>();
+            return script.bulletDamage;
+        }
+        return 0;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            int damage = getPlayerDamage(collision);
+            hp -= damage;
+            if (hp <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+
     }
 
     private void OnDrawGizmosSelected()
