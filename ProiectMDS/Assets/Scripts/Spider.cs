@@ -12,13 +12,11 @@ public class Spider : MonoBehaviour
     public float moveSpeed = 1f;
     public int hp = 30;
     public int damage = 20;
-    private int spiderGold;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        spiderGold = Random.Range(1, 6);
     }
 
     // Update is called once per frame
@@ -50,7 +48,7 @@ public class Spider : MonoBehaviour
         }
     }
 
-    private int getPlayerDamage()
+    private int getPlayerDamage(Collision2D collision)
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if(player.name == "Ninja")
@@ -66,23 +64,14 @@ public class Spider : MonoBehaviour
         return 0;
     }
 
-    private void increasePlayerGold()
-    {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        Player script = player.GetComponent<Player>();
-        script.gold += spiderGold;
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Bullet"))
         {
-            int damage = getPlayerDamage();
+            int damage = getPlayerDamage(collision);
             hp -= damage;
             if(hp <= 0)
             {
-                increasePlayerGold();
                 Destroy(gameObject);
             }
         }

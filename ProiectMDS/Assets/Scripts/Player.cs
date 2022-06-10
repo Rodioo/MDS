@@ -15,23 +15,14 @@ public class Player : MonoBehaviour
     Vector2 mousePos;
 
     public int hp = 100;
-    public HealthBarScript healthBarScript;
 
     private bool isHit;
     private float timeSinceLastHit;
-
-    public int gold;
-    public CurrencyScript currencyScript;
 
     private void Start()
     {
         timeSinceLastHit = Time.time;
         isHit = false;
-        
-        gold = 0;
-
-        currencyScript.setCurrency(gold);
-        healthBarScript.setMaxHealth();
     }
 
     void Update()
@@ -46,9 +37,6 @@ public class Player : MonoBehaviour
             isHit = false;
             timeSinceLastHit = Time.time;
         }
-
-        currencyScript.setCurrency(gold);
-
     }
 
     void FixedUpdate()
@@ -85,7 +73,6 @@ public class Player : MonoBehaviour
             if(!isHit)
             {
                 hp -= damage;
-                healthBarScript.setHealth(hp);
                 isHit = true;
             }
             if(hp <= 0)
