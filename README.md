@@ -21,6 +21,6 @@ Proiectul consta in dezvoltarea unui joc 2D de tip roguelike in Unity.
 - [Bug reporting](https://github.com/Rodioo/MDS/issues)
 - Build tool-ul folosit este Unity.
 - Design patterns: In progress
-- Pentru refactoring si code standards am incercat respectam principiile [SOLID](https://en.wikipedia.org/wiki/SOLID) si sa pastram o structura a proiectului cat mai organizata in foldere si subfoldere.
+- Pentru refactoring si code standards am incercat sa respectam [best practices](https://unity.com/how-to/organizing-your-project) pentru organizarea unui proiect in Unity.
   
   ![](https://i.imgur.com/g6FtbY6.png "Exemplu de structurare a folderelor din proiect")
