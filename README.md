@@ -1,6 +1,6 @@
 # Proiect MDS
 
-Proiect facut in cadrul cursului "Metodologii de Dezvoltare Software". 
+Proiect facut in cadrul cursului "Metode de Dezvoltare Software". 
 
 Proiectul consta in dezvoltarea unui joc 2D de tip roguelike in Unity. 
 
