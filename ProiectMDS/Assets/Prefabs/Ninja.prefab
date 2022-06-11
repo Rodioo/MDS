@@ -154,9 +154,7 @@ MonoBehaviour:
   moveSpeed: 10
   rb: {fileID: 8520626139255663636}
   cam: {fileID: 0}
-  hp: 100
   healthBarScript: {fileID: 3029481378199442986, guid: 7561d08494814494c90c87d446dbf710, type: 3}
-  gold: 0
   currencyScript: {fileID: 7930065801039590733, guid: d68d472cb9438994cab7159f4042a553, type: 3}
   playerStats: {fileID: 11400000, guid: 6e35d558eef051c4f819656e90ead017, type: 2}
 --- !u!95 &8520626139255663641
@@ -195,8 +193,8 @@ MonoBehaviour:
   shurikenPrefab: {fileID: 8214246055790939148, guid: 50ecfa15fffa9d53e9fb6f0bb3c245b0, type: 3}
   bulletForce: 13
   bulletDamage: 10
-  fireRate: 1
-  nextFire: 599.7346
+  fireRate: 0.3
+  nextFire: 0
 --- !u!61 &6193228113760376103
 BoxCollider2D:
   m_ObjectHideFlags: 0

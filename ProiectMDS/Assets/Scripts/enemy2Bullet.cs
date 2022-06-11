@@ -26,12 +26,14 @@ public class enemy2Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Physics2D.IgnoreLayerCollision(6, 7);
         if (collision.gameObject.CompareTag("Player"))
             Destroy(gameObject);
-        //if (!collision.gameObject.CompareTag("Enemy"))
-         //   Destroy(gameObject);
+        if (!collision.gameObject.CompareTag("Player") && 
+            !collision.gameObject.CompareTag("slimeBullet"))
+           Destroy(gameObject);
         //if (collision.gameObject.name == "HitBox")
-           // MenuCollision.checkMenuHit(collision);
+        // MenuCollision.checkMenuHit(collision);
     }
 
 
