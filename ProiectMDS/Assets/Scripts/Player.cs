@@ -72,13 +72,19 @@ public class Player : MonoBehaviour
             Spider script = spider.GetComponent<Spider>();
             return script.damage;
         }
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            GameObject boss = GameObject.FindGameObjectWithTag("Boss");
+            BossMove script = boss.GetComponent<BossMove>();
+            return script.damage;
+        }
         return 0;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         int damage = getEnemyDamage(collision);
-        if (collision.gameObject.CompareTag("Spider"))
+        if (collision.gameObject.CompareTag("Spider") || collision.gameObject.CompareTag("Boss"))
         {
             if(!isHit)
             {
@@ -97,9 +103,16 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Spikes"))
         {
-            playerStats.hp -= 10;
-            healthBarScript.setHealth(playerStats.hp);
-            isHit = true;
+            if (!isHit)
+            {
+                playerStats.hp -= 10;
+                healthBarScript.setHealth(playerStats.hp);
+                isHit = true;
+            }
+            if (playerStats.hp <= 0)
+            {
+                Debug.Log("GG");
+            }
         }
     }
 }

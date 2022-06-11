@@ -4,38 +4,84 @@ using UnityEngine;
 
 public class BossMove : MonoBehaviour
 {
+    private Transform player;
+
+    public int hp = 200;
+    public int damage = 20;
+
+    public float fireRate = 1f;
+    private float nextFireTime;
+
+    public GameObject bullet;
+    public GameObject bulletParent;
+
     public float speed = 10;
-    private float waitTime;
-    public float startWaitTime = 1;
 
     int phase = 1;
 
     public Transform[] moveSpots;
     private int randomSpot;
+    private Rigidbody2D rb;
 
     void Start()
     {
-        waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
-
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = this.GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
-
-        if(Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f)
+        if (phase == 1)
         {
-            if(waitTime <= 0)
-            {
+            if (hp <= 100 )
+                phase = 2;
+
+            Vector3 direction = moveSpots[randomSpot].position - transform.position;
+
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            rb.rotation = angle;
+
+            transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
+
+            if(Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.5f)
                 randomSpot = Random.Range(0, moveSpots.Length);
-                waitTime = startWaitTime;
-            }
-            else
+
+            if(nextFireTime < Time.time)
             {
-                waitTime -= Time.deltaTime;
+                Instantiate(bullet, bulletParent.transform.position,
+                Quaternion.identity);
+                nextFireTime = Time.time + fireRate;
             }
         }
+    }
 
+    private int getPlayerDamage(Collision2D collision)
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player.name == "Ninja")
+        {
+            ShootingNinja script = player.GetComponent<ShootingNinja>();
+            return script.bulletDamage;
+        }
+        if (player.name == "Archer")
+        {
+            ShootingArcher script = player.GetComponent<ShootingArcher>();
+            return script.bulletDamage;
+        }
+        return 0;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            int damage = getPlayerDamage(collision);
+            hp -= damage;
+            if (hp <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

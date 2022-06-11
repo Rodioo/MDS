@@ -32,8 +32,8 @@ public class enemy2Bullet : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        
-        if(transform.position.x == target.x && transform.position.y == target.y)
+
+        if (transform.position.x == target.x && transform.position.y == target.y)
         {
             Destroy(gameObject);
         }
@@ -42,6 +42,7 @@ public class enemy2Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Physics2D.IgnoreLayerCollision(6, 7);
+        Physics2D.IgnoreLayerCollision(6, 6);
         if (collision.gameObject.CompareTag("Player"))
             Destroy(gameObject);
         if (!collision.gameObject.CompareTag("Player") && 

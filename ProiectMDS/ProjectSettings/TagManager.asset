@@ -8,6 +8,7 @@ TagManager:
   - Spider
   - Spikes
   - slimeBullet
+  - Boss
   layers:
   - Default
   - TransparentFX

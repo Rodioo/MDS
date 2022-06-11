@@ -7,7 +7,7 @@ public class enemy2move : MonoBehaviour
 
     public float speed;
 
-    public float lineOfSight;
+    public float lineOfSite;
     public float shootingRange;
     
     public float fireRate = 1f;
@@ -20,7 +20,7 @@ public class enemy2move : MonoBehaviour
 
     private Transform player;
 
-    public int hp = 16;
+    public int hp = 30;
     public int damage = 20;
 
     // Start is called before the first frame update
@@ -42,7 +42,7 @@ public class enemy2move : MonoBehaviour
         float distanceFromPlayer = Vector2.Distance(player.position,
             transform.position);
 
-        if(distanceFromPlayer < lineOfSight  && distanceFromPlayer > shootingRange)
+        if(distanceFromPlayer < lineOfSite  && distanceFromPlayer > shootingRange)
         {
             transform.position = Vector2.MoveTowards(this.transform.position
                 , player.position, speed * Time.deltaTime);
@@ -93,7 +93,7 @@ public class enemy2move : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, lineOfSight);
+        Gizmos.DrawWireSphere(transform.position, lineOfSite);
         Gizmos.DrawWireSphere(transform.position, shootingRange);
 
     }
