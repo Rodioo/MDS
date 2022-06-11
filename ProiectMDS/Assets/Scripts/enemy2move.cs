@@ -7,7 +7,7 @@ public class enemy2move : MonoBehaviour
 
     public float speed;
 
-    public float lineOfSite;
+    public float lineOfSight;
     public float shootingRange;
     
     public float fireRate = 1f;
@@ -42,7 +42,7 @@ public class enemy2move : MonoBehaviour
         float distanceFromPlayer = Vector2.Distance(player.position,
             transform.position);
 
-        if(distanceFromPlayer < lineOfSite  && distanceFromPlayer > shootingRange)
+        if(distanceFromPlayer < lineOfSight  && distanceFromPlayer > shootingRange)
         {
             transform.position = Vector2.MoveTowards(this.transform.position
                 , player.position, speed * Time.deltaTime);
@@ -93,7 +93,7 @@ public class enemy2move : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, lineOfSite);
+        Gizmos.DrawWireSphere(transform.position, lineOfSight);
         Gizmos.DrawWireSphere(transform.position, shootingRange);
 
     }

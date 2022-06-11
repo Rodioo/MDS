@@ -5,7 +5,9 @@ using UnityEngine;
 public class enemy2Bullet : MonoBehaviour
 {
 
-    GameObject target;
+    Transform player;
+    Vector2 target;
+
     public float speed;
     Rigidbody2D bulletRB;
 
@@ -17,11 +19,24 @@ public class enemy2Bullet : MonoBehaviour
     {
         bulletRB = GetComponent<Rigidbody2D>();
         
-        target = GameObject.FindGameObjectWithTag("Player");
-        Vector2 moveDir = (target.transform.position - transform.position)
-            * speed;
-        bulletRB.velocity = new Vector2(moveDir.x,moveDir.y);
-        Destroy(this.gameObject, 2);
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        target = new Vector2(player.position.x, player.position.y);
+
+
+        //distToPlayer = Vector2.Distance(transform.position, player.position);
+        //Vector2 moveDir = (target.transform.position - transform.position);
+        //bulletRB.velocity = new Vector2(moveDir.x,moveDir.y);
+        Destroy(this.gameObject, 5);
+    }
+
+    void Update()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        
+        if(transform.position.x == target.x && transform.position.y == target.y)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

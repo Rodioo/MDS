@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.99
-  lineOfSite: 17.54
+  lineOfSight: 50
   shootingRange: 11.71
   fireRate: 2
   bullet: {fileID: 1849708632311439030, guid: 8ea85b1c359931c438e0c37b7308ae26, type: 3}
@@ -144,8 +144,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 20
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
