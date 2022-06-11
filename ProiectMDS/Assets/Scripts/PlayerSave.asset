@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34241ba4e8a60a644816d2f02c8479e1, type: 3}
   m_Name: PlayerSave
   m_EditorClassIdentifier: 
-  initPosition: {x: 17.6, y: 1.15}
-  hp: 60
-  gold: 12
+  initPosition: {x: -15.4, y: 1.15}
+  hp: 100
+  gold: 0
