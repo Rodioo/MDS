@@ -197,8 +197,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   rb: {fileID: 8724920708139399720}
-  cam: {fileID: 0}
+  cam: {fileID: 6899693376340147091, guid: 21a1a3f8846f745438951d32ffff2553, type: 3}
   hp: 100
   healthBarScript: {fileID: 3029481378199442986, guid: 7561d08494814494c90c87d446dbf710, type: 3}
   gold: 0
   currencyScript: {fileID: 7930065801039590733, guid: d68d472cb9438994cab7159f4042a553, type: 3}
+  playerStats: {fileID: 11400000, guid: 6e35d558eef051c4f819656e90ead017, type: 2}

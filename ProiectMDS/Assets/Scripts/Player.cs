@@ -14,24 +14,22 @@ public class Player : MonoBehaviour
 
     Vector2 mousePos;
 
-    public int hp = 100;
     public HealthBarScript healthBarScript;
 
     private bool isHit;
     private float timeSinceLastHit;
 
-    public int gold;
     public CurrencyScript currencyScript;
+    public GlobalStatus playerStats;
 
     private void Start()
     {
+        transform.position = playerStats.initPosition;
         timeSinceLastHit = Time.time;
         isHit = false;
-        
-        gold = 0;
 
-        currencyScript.setCurrency(gold);
-        healthBarScript.setMaxHealth();
+        currencyScript.setCurrency(playerStats.gold);
+        healthBarScript.setHealth(playerStats.hp);
     }
 
     void Update()
@@ -47,7 +45,7 @@ public class Player : MonoBehaviour
             timeSinceLastHit = Time.time;
         }
 
-        currencyScript.setCurrency(gold);
+        currencyScript.setCurrency(playerStats.gold);
 
     }
 
@@ -56,7 +54,7 @@ public class Player : MonoBehaviour
         
         if(movement.x != 0 && movement.y != 0)
         {
-            rb.MovePosition(rb.position + movement * (moveSpeed/2) * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + movement * (moveSpeed) * Time.fixedDeltaTime);
         }
         else{
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
@@ -84,14 +82,24 @@ public class Player : MonoBehaviour
         {
             if(!isHit)
             {
-                hp -= damage;
-                healthBarScript.setHealth(hp);
+                playerStats.hp -= damage;
+                healthBarScript.setHealth(playerStats.hp);
                 isHit = true;
             }
-            if(hp <= 0)
+            if(playerStats.hp <= 0)
             {
                 Debug.Log("GG");
             }
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Spikes"))
+        {
+            playerStats.hp -= 10;
+            healthBarScript.setHealth(playerStats.hp);
+            isHit = true;
         }
     }
 }
