@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Spider
+  - Spikes
   layers:
   - Default
   - TransparentFX

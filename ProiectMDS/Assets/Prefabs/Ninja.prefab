@@ -158,6 +158,7 @@ MonoBehaviour:
   healthBarScript: {fileID: 3029481378199442986, guid: 7561d08494814494c90c87d446dbf710, type: 3}
   gold: 0
   currencyScript: {fileID: 7930065801039590733, guid: d68d472cb9438994cab7159f4042a553, type: 3}
+  playerStats: {fileID: 11400000, guid: 6e35d558eef051c4f819656e90ead017, type: 2}
 --- !u!95 &8520626139255663641
 Animator:
   serializedVersion: 3

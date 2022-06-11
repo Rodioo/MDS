@@ -71,3 +71,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 
+  playerStats: {fileID: 11400000, guid: 6e35d558eef051c4f819656e90ead017, type: 2}
+  transitionPosition: {x: 1.15, y: 8.5}

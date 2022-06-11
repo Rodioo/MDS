@@ -71,7 +71,7 @@ public class Spider : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Player script = player.GetComponent<Player>();
-        script.gold += spiderGold;
+        script.playerStats.gold += spiderGold;
         
     }
 
