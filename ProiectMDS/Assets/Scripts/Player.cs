@@ -78,13 +78,21 @@ public class Player : MonoBehaviour
             BossMove script = boss.GetComponent<BossMove>();
             return script.damage;
         }
+        if (collision.gameObject.CompareTag("slimeBullet"))
+        {
+            GameObject enemy2 = GameObject.FindGameObjectWithTag("shooter");
+            enemy2move script = enemy2.GetComponent<enemy2move>();
+            return script.damage;
+        }
         return 0;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         int damage = getEnemyDamage(collision);
-        if (collision.gameObject.CompareTag("Spider") || collision.gameObject.CompareTag("Boss"))
+        if (collision.gameObject.CompareTag("Spider") || 
+            collision.gameObject.CompareTag("Boss") ||
+            collision.gameObject.CompareTag("slimeBullet"))
         {
             if(!isHit)
             {

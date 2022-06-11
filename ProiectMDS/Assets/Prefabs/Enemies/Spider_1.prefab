@@ -102,6 +102,7 @@ MonoBehaviour:
   moveSpeed: 8
   hp: 30
   damage: 20
+  roomService: {fileID: 11400000, guid: ac416cceb118ba7418119313ee923bd8, type: 2}
 --- !u!50 &5197573931737134616
 Rigidbody2D:
   serializedVersion: 4

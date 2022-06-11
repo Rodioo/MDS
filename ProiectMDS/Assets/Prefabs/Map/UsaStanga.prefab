@@ -73,3 +73,4 @@ MonoBehaviour:
   scene: 
   playerStats: {fileID: 11400000, guid: 6e35d558eef051c4f819656e90ead017, type: 2}
   transitionPosition: {x: 17.6, y: 1.15}
+  roomService: {fileID: 11400000, guid: ac416cceb118ba7418119313ee923bd8, type: 2}

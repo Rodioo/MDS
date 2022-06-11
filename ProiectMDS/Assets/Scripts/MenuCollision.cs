@@ -9,9 +9,11 @@ public class MenuCollision : MonoBehaviour
 {
     private static bool isNinja = true;
 
-    public static void checkMenuHit(Collider2D col, GlobalStatus globalPlayer)
+    public static void checkMenuHit(Collider2D col, GlobalStatus globalPlayer, RoomService roomService)
     {
         Transform textTransform = col.gameObject.transform.parent;
+
+
 
 
         //Main Menu Choices
@@ -21,6 +23,11 @@ public class MenuCollision : MonoBehaviour
             globalPlayer.hp = 100;
             globalPlayer.gold = 0;
             globalPlayer.initPosition = new Vector2(1, 1);
+
+            for(int i= 0; i<=16; ++i)
+            {
+                roomService.rooms[i] = false;
+            }
 
         }
         else if (textTransform.name == "Settings_Text")

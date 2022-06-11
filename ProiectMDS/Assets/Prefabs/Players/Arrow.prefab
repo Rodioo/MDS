@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalPlayer: {fileID: 11400000, guid: 6e35d558eef051c4f819656e90ead017, type: 2}
+  roomService: {fileID: 11400000, guid: ac416cceb118ba7418119313ee923bd8, type: 2}
 --- !u!114 &1122139677555980576
 MonoBehaviour:
   m_ObjectHideFlags: 0

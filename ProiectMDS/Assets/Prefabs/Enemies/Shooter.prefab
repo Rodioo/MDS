@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3914525035952602826}
   - component: {fileID: 4663979171564975742}
   - component: {fileID: 3914525035494563612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shooter
-  m_TagString: Untagged
+  m_TagString: shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,13 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.99
-  lineOfSight: 50
   shootingRange: 11.71
   fireRate: 2
   bullet: {fileID: 1849708632311439030, guid: 8ea85b1c359931c438e0c37b7308ae26, type: 3}
   bulletParent: {fileID: 3914525036261211887}
   hp: 16
   damage: 20
+  roomService: {fileID: 11400000, guid: ac416cceb118ba7418119313ee923bd8, type: 2}
 --- !u!61 &4663979171564975742
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3914525036261211886}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}

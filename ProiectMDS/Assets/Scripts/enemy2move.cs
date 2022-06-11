@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class enemy2move : MonoBehaviour
 {
 
     public float speed;
 
-    public float lineOfSite;
+    private float lineOfSite = 50;
     public float shootingRange;
     
     public float fireRate = 1f;
@@ -23,9 +24,16 @@ public class enemy2move : MonoBehaviour
     public int hp = 30;
     public int damage = 20;
 
+    public RoomService roomService;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (roomService.rooms[SceneManager.GetActiveScene().buildIndex])
+        {
+            Destroy(gameObject);
+
+        }
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = this.GetComponent<Rigidbody2D>();
     }

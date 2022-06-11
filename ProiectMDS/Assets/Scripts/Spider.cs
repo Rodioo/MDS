@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Spider : MonoBehaviour
 {
@@ -14,9 +16,18 @@ public class Spider : MonoBehaviour
     public int damage = 20;
     private int spiderGold;
 
+    public RoomService roomService;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        if (roomService.rooms[SceneManager.GetActiveScene().buildIndex])
+        {
+            Destroy(gameObject);
+
+        }
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = this.GetComponent<Rigidbody2D>();
         spiderGold = Random.Range(1, 6);
