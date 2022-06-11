@@ -8,14 +8,20 @@ using System;
 public class MenuCollision : MonoBehaviour
 {
     private static bool isNinja = true;
-    public static void checkMenuHit(Collision2D col)
+
+    public static void checkMenuHit(Collider2D col, GlobalStatus globalPlayer)
     {
         Transform textTransform = col.gameObject.transform.parent;
+
 
         //Main Menu Choices
         if (textTransform.name == "NewGame_Text")
         {
             SceneManager.LoadScene(1);
+            globalPlayer.hp = 100;
+            globalPlayer.gold = 0;
+            globalPlayer.initPosition = new Vector2(1, 1);
+
         }
         else if (textTransform.name == "Settings_Text")
         {
