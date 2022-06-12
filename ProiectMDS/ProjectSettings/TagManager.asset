@@ -12,6 +12,7 @@ TagManager:
   - shooter
   - counter
   - Item
+  - Music
   layers:
   - Default
   - TransparentFX

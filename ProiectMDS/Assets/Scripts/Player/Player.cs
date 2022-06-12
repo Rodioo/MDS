@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
 
         currencyScript.setCurrency(playerStats.gold);
         healthBarScript.setHealth();
+
+        GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().PlayMusic();
     }
 
     void Update()

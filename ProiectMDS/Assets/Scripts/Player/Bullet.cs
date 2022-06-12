@@ -17,7 +17,12 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "HitBox")
+        {
             MenuCollision.checkMenuHit(collision, globalPlayer, roomService);
+            Destroy(gameObject);
+        }
+            
+
     }
 
 }

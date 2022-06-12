@@ -8,13 +8,11 @@ using System;
 public class MenuCollision : MonoBehaviour
 {
     private static bool isNinja = true;
+    public static int volume = 10;
 
     public static void checkMenuHit(Collider2D col, GlobalStatus globalPlayer, RoomService roomService)
     {
         Transform textTransform = col.gameObject.transform.parent;
-
-
-
 
         //Main Menu Choices
         if (textTransform.name == "NewGame_Text")
@@ -34,6 +32,12 @@ public class MenuCollision : MonoBehaviour
             }
 
         }
+        else if (textTransform.name == "ContinueGame_Text")
+        {
+            SceneManager.LoadScene(1);
+            globalPlayer.initPosition = new Vector2(1, 1);
+
+        }
         else if (textTransform.name == "Settings_Text")
         {
             GameObject mainMenu = textTransform.parent.parent.Find("MainMenu").gameObject;
@@ -45,38 +49,26 @@ public class MenuCollision : MonoBehaviour
         else if (textTransform.name == "Volume-")
         {
             TextMeshProUGUI volume_text = textTransform.parent.Find("Volume_Text").gameObject.GetComponent<TextMeshProUGUI>();
-            int volume = Int32.Parse(volume_text.text.Split(':')[1]);
+            volume = Int32.Parse(volume_text.text.Split(':')[1]);
             if (volume > 0)
                 volume--;
-            PlayerPrefs.SetFloat("volume", volume);
+            float scaledVolume = volume / 10f;
+            PlayerPrefs.SetFloat("volume", scaledVolume);
             AudioListener.volume = PlayerPrefs.GetFloat("volume");
             volume_text.text = "Volume:" + volume;
+            globalPlayer.volume = volume;
         }
         else if (textTransform.name == "Volume+")
         {
             TextMeshProUGUI volume_text = textTransform.parent.Find("Volume_Text").gameObject.GetComponent<TextMeshProUGUI>();
-            int volume = Int32.Parse(volume_text.text.Split(':')[1]);
+            volume = Int32.Parse(volume_text.text.Split(':')[1]);
             if (volume < 10)
                 volume++;
-            PlayerPrefs.SetFloat("volume", volume);
+            float scaledVolume = volume / 10f;
+            PlayerPrefs.SetFloat("volume", scaledVolume);
             AudioListener.volume = PlayerPrefs.GetFloat("volume");
             volume_text.text = "Volume:" + volume;
-        }
-        else if (textTransform.name == "Brightness-")
-        {
-            TextMeshProUGUI brightness_text = textTransform.parent.Find("Brightness_Text").gameObject.GetComponent<TextMeshProUGUI>();
-            int brightness = Int32.Parse(brightness_text.text.Split(':')[1]);
-            if (brightness > 0)
-                brightness--;
-            brightness_text.text = "Brightness:" + brightness;
-        }
-        else if (textTransform.name == "Brightness+")
-        {
-            TextMeshProUGUI brightness_text = textTransform.parent.Find("Brightness_Text").gameObject.GetComponent<TextMeshProUGUI>();
-            int brightness = Int32.Parse(brightness_text.text.Split(':')[1]);
-            if (brightness < 5)
-                brightness++;
-            brightness_text.text = "Brightness:" + brightness;
+            globalPlayer.volume = volume;
         }
         else if (textTransform.name == "Back_Text")
         {

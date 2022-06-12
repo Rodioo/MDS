@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34241ba4e8a60a644816d2f02c8479e1, type: 3}
   m_Name: PlayerSave
   m_EditorClassIdentifier: 
-  initPosition: {x: -15.4, y: 1.15}
-  hp: 100
+  initPosition: {x: -5, y: 0}
+  hp: 80
   maxHp: 100
-  gold: 6
+  gold: 9
   dmg: 15
   aspd: 1
-  bspd: 5
-  spd: 3
+  bspd: 7
+  spd: 6
+  volume: 0

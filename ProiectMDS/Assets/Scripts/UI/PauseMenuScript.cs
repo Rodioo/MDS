@@ -42,6 +42,7 @@ public class PauseMenuScript : MonoBehaviour
 
     public void loadMainMenuScene()
     {
+        Destroy(GameObject.FindGameObjectWithTag("Music"));
         resumeGame();
         SceneManager.LoadScene(0);
         globalPlayer.initPosition = new Vector2(-5, 0);
