@@ -106,7 +106,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 8553092956536608252, guid: cc47026e834ab285286f9e060a38bf04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -151,12 +151,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627bf095afb849d2f9274dd9af4ed751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: a8c4c3c7635261f47bf3d080c4771022, type: 2}
   moveSpeed: 10
   rb: {fileID: 8520626139255663636}
   cam: {fileID: 0}
   healthBarScript: {fileID: 3029481378199442986, guid: 7561d08494814494c90c87d446dbf710, type: 3}
   currencyScript: {fileID: 7930065801039590733, guid: d68d472cb9438994cab7159f4042a553, type: 3}
-  playerStats: {fileID: 11400000, guid: 6e35d558eef051c4f819656e90ead017, type: 2}
 --- !u!95 &8520626139255663641
 Animator:
   serializedVersion: 3

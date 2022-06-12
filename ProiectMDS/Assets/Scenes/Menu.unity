@@ -1655,7 +1655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc92abf622dd619438e437642968c856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  globalPlayer: {fileID: 11400000, guid: 6e35d558eef051c4f819656e90ead017, type: 2}
+  globalPlayer: {fileID: 11400000, guid: a8c4c3c7635261f47bf3d080c4771022, type: 2}
 --- !u!1001 &1380236125
 PrefabInstance:
   m_ObjectHideFlags: 0

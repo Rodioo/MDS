@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GlobalStatus playerStats;
     public float moveSpeed = 3f;
 
     public Rigidbody2D rb;
@@ -20,11 +21,11 @@ public class Player : MonoBehaviour
     private float timeSinceLastHit;
 
     public CurrencyScript currencyScript;
-    public GlobalStatus playerStats;
 
     private void Start()
     {
         transform.position = playerStats.initPosition;
+        moveSpeed = playerStats.spd;
         timeSinceLastHit = Time.time;
         isHit = false;
 
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
+        moveSpeed = playerStats.spd;
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
         if(Time.time >= timeSinceLastHit + 0.5f)
@@ -121,6 +123,17 @@ public class Player : MonoBehaviour
             {
                 Debug.Log("GG");
             }
+        }
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            GameObject item = collision.gameObject;
+            Item script = item.GetComponent<Item>();
+
+            playerStats.spd += script.spd;
+            playerStats.hp += script.hp;
+            playerStats.dmg += script.dmg;
+            playerStats.bspd += script.bspd;
+            playerStats.aspd *= script.aspd;
         }
     }
 }

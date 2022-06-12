@@ -22,6 +22,10 @@ public class MenuCollision : MonoBehaviour
             SceneManager.LoadScene(1);
             globalPlayer.hp = 100;
             globalPlayer.gold = 0;
+            globalPlayer.dmg = 15;
+            globalPlayer.aspd = 1f;
+            globalPlayer.bspd = 7f;
+            globalPlayer.spd = 6f;
             globalPlayer.initPosition = new Vector2(1, 1);
 
             for(int i= 0; i<=16; ++i)

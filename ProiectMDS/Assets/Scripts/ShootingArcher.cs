@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShootingArcher : MonoBehaviour
 {
+
+    public GlobalStatus playerStats;
     public Transform firePoint;
     public GameObject arrowPrefab;
 
@@ -17,6 +19,9 @@ public class ShootingArcher : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
+            bulletForce = playerStats.bspd;
+            bulletDamage = playerStats.dmg;
+            fireRate = playerStats.aspd;
             nextFire = Time.time + fireRate;
             Shoot();
         }
@@ -32,5 +37,6 @@ public class ShootingArcher : MonoBehaviour
         Rigidbody2D rb = arrow.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
     }
+
 
 }

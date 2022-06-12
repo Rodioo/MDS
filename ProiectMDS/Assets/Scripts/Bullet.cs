@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour
     //Coliziune
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Physics2D.IgnoreLayerCollision(7, 7);
+        Physics2D.IgnoreLayerCollision(7, 9);
         if (!collision.gameObject.CompareTag("Player"))
             Destroy(gameObject);
     }
