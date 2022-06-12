@@ -88,6 +88,13 @@ public class Player : MonoBehaviour
             enemy2move script = enemy2.GetComponent<enemy2move>();
             return script.damage;
         }
+
+        if (collision.gameObject.CompareTag("turretBullet"))
+        {
+            GameObject turretObj = GameObject.FindGameObjectWithTag("turret");
+            turret script = turretObj.GetComponent<turret>();
+            return script.damage;
+        }
         return 0;
     }
 
@@ -96,7 +103,8 @@ public class Player : MonoBehaviour
         int damage = getEnemyDamage(collision);
         if (collision.gameObject.CompareTag("Spider") || 
             collision.gameObject.CompareTag("Boss") ||
-            collision.gameObject.CompareTag("slimeBullet"))
+            collision.gameObject.CompareTag("slimeBullet") ||
+            collision.gameObject.CompareTag("turretBullet"))
         {
             if(!isHit)
             {
