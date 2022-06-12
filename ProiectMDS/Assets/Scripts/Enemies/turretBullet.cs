@@ -17,6 +17,8 @@ public class turretBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(10, 10);
+        Physics2D.IgnoreLayerCollision(6, 10);
         bulletRB = GetComponent<Rigidbody2D>();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;

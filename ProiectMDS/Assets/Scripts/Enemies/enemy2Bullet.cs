@@ -17,6 +17,9 @@ public class enemy2Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(6, 7);
+        Physics2D.IgnoreLayerCollision(6, 6);
+        Physics2D.IgnoreLayerCollision(6, 8);
         bulletRB = GetComponent<Rigidbody2D>();
         
         player = GameObject.FindGameObjectWithTag("Player").transform;
