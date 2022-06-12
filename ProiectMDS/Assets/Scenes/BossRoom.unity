@@ -1409,10 +1409,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8166230775341893927, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 6361617404526489046, guid: c708287aad503414d806dfc0656bcf9f, type: 3}
-    - target: {fileID: -8166230775341893927, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
       propertyPath: moveSpots.Array.data[0]
       value: 
       objectReference: {fileID: 1195578167}
@@ -1448,21 +1444,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 5973421922021847712, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8423190103008525850, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8560733336765545509, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8560733336765545509, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.77
+      value: -8.66
       objectReference: {fileID: 0}
     - target: {fileID: 8560733336765545509, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
       propertyPath: m_LocalPosition.y
