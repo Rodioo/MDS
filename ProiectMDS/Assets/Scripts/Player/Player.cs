@@ -143,6 +143,7 @@ public class Player : MonoBehaviour
                 playerStats.spd += script.spd;
                 playerStats.hp += script.hp;
                 playerStats.maxHp += script.hp;
+                healthBarScript.setMaxHealth();
                 playerStats.dmg += script.dmg;
                 playerStats.bspd += script.bspd;
                 playerStats.aspd *= script.aspd;

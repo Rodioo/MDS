@@ -127,3 +127,9 @@ MonoBehaviour:
   spd: 0
   aspd: 0.6
   bspd: 5
+  price: 0
+  shop1: {fileID: 0}
+  shop2: {fileID: 0}
+  shop3: {fileID: 0}
+  shop_number: 0
+  itemSave: {fileID: 11400000, guid: a8c4c3c7635261f47bf3d080c4771022, type: 2}

@@ -13,6 +13,7 @@ public class GlobalStatus : ScriptableObject
     public float aspd = 1f;
     public float bspd = 5f;
     public float spd = 3f;
+    public bool[] items = new bool[4];
     public int volume = MenuCollision.volume;
 }
 /*

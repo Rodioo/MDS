@@ -32,6 +32,11 @@ public class MenuCollision : MonoBehaviour
                 roomService.rooms[i] = false;
             }
 
+            for (int i = 0; i <= 3; ++i)
+            {
+                globalPlayer.items[i] = false;
+            }
+
         }
         else if (textTransform.name == "ContinueGame_Text")
         {

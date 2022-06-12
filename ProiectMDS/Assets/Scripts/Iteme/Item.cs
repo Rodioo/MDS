@@ -14,17 +14,30 @@ public class Item : MonoBehaviour
     public Shop2 shop2;
     public Shop3 shop3;
     public int shop_number;
-
+    public GlobalStatus itemSave;
     private void Start()
     {
-        if (shop_number == 1)
-            shop1.setPrice(price);
-        else if (shop_number == 2)
-            shop2.setPrice(price);
-        else if (shop_number == 3)
-            shop3.setPrice(price);
+        if (!itemSave.items[shop_number])
+        {
+            if (shop_number == 1)
+                shop1.setPrice(price);
+            else if (shop_number == 2)
+                shop2.setPrice(price);
+            else if (shop_number == 3)
+                shop3.setPrice(price);
+            else
+                price = 0;
+        }
         else
-            price = 0;
+        {
+            Destroy(gameObject);
+            if (shop_number == 1)
+                shop1.setPrice(0);
+            else if (shop_number == 2)
+                shop2.setPrice(0);
+            else if (shop_number == 3)
+                shop3.setPrice(0);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,6 +57,7 @@ public class Item : MonoBehaviour
                     shop2.setPrice(0);
                 else if (shop_number == 3)
                     shop3.setPrice(0);
+                itemSave.items[shop_number] = true;
             }
 
         }
