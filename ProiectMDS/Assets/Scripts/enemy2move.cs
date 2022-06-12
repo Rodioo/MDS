@@ -7,10 +7,11 @@ public class enemy2move : MonoBehaviour
 {
 
     public float speed;
+    public Animator animator;
 
     private float lineOfSite = 50;
     public float shootingRange;
-    
+
     public float fireRate = 1f;
     private float nextFireTime;
 
@@ -34,6 +35,7 @@ public class enemy2move : MonoBehaviour
             Destroy(gameObject);
 
         }
+        nextFireTime = Time.time + fireRate;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = this.GetComponent<Rigidbody2D>();
     }
@@ -42,7 +44,7 @@ public class enemy2move : MonoBehaviour
     void Update()
     {
         Vector3 direction = player.position - transform.position;
-        
+
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
 
@@ -50,21 +52,29 @@ public class enemy2move : MonoBehaviour
         float distanceFromPlayer = Vector2.Distance(player.position,
             transform.position);
 
-        if(distanceFromPlayer < lineOfSite  && distanceFromPlayer > shootingRange)
+        if (distanceFromPlayer < lineOfSite && distanceFromPlayer > shootingRange)
         {
             transform.position = Vector2.MoveTowards(this.transform.position
                 , player.position, speed * Time.deltaTime);
         }
-        else if(distanceFromPlayer <= shootingRange && 
+        else if (distanceFromPlayer <= shootingRange && nextFireTime > Time.time && nextFireTime < Time.time + 0.5f)
+        {
+            animator.SetBool("isShooting", true);
+        }
+        else if (distanceFromPlayer <= shootingRange &&
             nextFireTime < Time.time)
         {
             Instantiate(bullet, bulletParent.transform.position,
                 Quaternion.identity);
             nextFireTime = Time.time + fireRate;
+            animator.SetBool("isShooting", false);
 
         }
+        else
+        {
+            animator.SetBool("isShooting", false);
+        }
 
-       
     }
 
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3914525035952602826}
   - component: {fileID: 4663979171564975742}
   - component: {fileID: 3914525035494563612}
+  - component: {fileID: 2058681432}
   m_Layer: 8
   m_Name: Shooter
   m_TagString: shooter
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3914525035952602827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.67, y: 3.73, z: 0}
-  m_LocalScale: {x: 1, y: 1.0527, z: 1}
+  m_LocalScale: {x: 5.9917, y: 6.307463, z: 5.9917}
   m_Children:
   - {fileID: 3914525036261211886}
   m_Father: {fileID: 0}
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: 20058b39a331b764bb38578eeef6b5e9, type: 3}
+  m_Sprite: {fileID: -7263262467203474343, guid: cc47026e834ab285286f9e060a38bf04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.99
+  animator: {fileID: 2058681432}
   shootingRange: 11.71
   fireRate: 2
   bullet: {fileID: 1849708632311439030, guid: 8ea85b1c359931c438e0c37b7308ae26, type: 3}
@@ -119,18 +121,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.017, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.24, y: 0.25}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.21, y: 0.24}
   m_EdgeRadius: 0
 --- !u!50 &3914525035494563612
 Rigidbody2D:
@@ -153,6 +155,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &2058681432
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3914525035952602827}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c2ff8443f3454f844b6b0f1ae97447ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3914525036261211887
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +186,7 @@ GameObject:
   m_Layer: 8
   m_Name: BulletParent
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -177,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914525036261211887}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0.12, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3914525035952602828}

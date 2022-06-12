@@ -32,6 +32,27 @@ TextureImporter:
   - first:
       213: 6155212226941906339
     second: Archer
+  - first:
+      213: -2950032572879587788
+    second: Imp_idle1
+  - first:
+      213: -7263262467203474343
+    second: Imp_idle3
+  - first:
+      213: 7010617245534139418
+    second: Imp_fire1
+  - first:
+      213: -7039003182478323700
+    second: Imp_fire2
+  - first:
+      213: -5559150632450785296
+    second: Imp_fire3
+  - first:
+      213: -8987557684774062561
+    second: Imp_idle
+  - first:
+      213: -6751597515445260605
+    second: fireball
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -330,7 +351,7 @@ TextureImporter:
         width: 20
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,6 +359,153 @@ TextureImporter:
       bones: []
       spriteID: 1f948c85a64fe5ed0800000000000000
       internalID: -2423230811885516303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp_idle1
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 304
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4363ea141016f07d0800000000000000
+      internalID: -2950032572879587788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp_idle3
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 304
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cd8ebb445b33b90800000000000000
+      internalID: -7263262467203474343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp_fire1
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 304
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a143a40bd37ba4160800000000000000
+      internalID: 7010617245534139418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp_fire2
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 304
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00198756ef605e90800000000000000
+      internalID: -7039003182478323700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp_fire3
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 304
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fff1e314fde9d2b0800000000000000
+      internalID: -5559150632450785296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp_idle
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 303
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16b5b067e7c54380800000000000000
+      internalID: -8987557684774062561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireball
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 219
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cea979c4d18d42a0800000000000000
+      internalID: -6751597515445260605
       vertices: []
       indices: 
       edges: []
