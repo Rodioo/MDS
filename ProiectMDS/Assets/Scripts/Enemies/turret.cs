@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class enemy2move : MonoBehaviour
+
+public class turret : MonoBehaviour
 {
 
-    public float speed;
-    public Animator animator;
-
-    private float lineOfSite = 50;
     public float shootingRange;
 
     public float fireRate = 1f;
@@ -25,24 +22,25 @@ public class enemy2move : MonoBehaviour
     public int hp = 30;
     public int damage = 20;
 
-    private int shooterGold;
+    private int turretGold;
+
 
 
     public RoomService roomService;
-
     // Start is called before the first frame update
     void Start()
     {
         if (roomService.rooms[SceneManager.GetActiveScene().buildIndex])
         {
             Destroy(gameObject);
-
+            Debug.Log("ghe");
         }
-        nextFireTime = Time.time + fireRate;
+
+        //nextFireTime = Time.time + fireRate;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = this.GetComponent<Rigidbody2D>();
 
-        shooterGold = Random.Range(2, 8);
+        turretGold = Random.Range(5, 10);
     }
 
     // Update is called once per frame
@@ -53,33 +51,17 @@ public class enemy2move : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
 
-
         float distanceFromPlayer = Vector2.Distance(player.position,
             transform.position);
 
-        if (distanceFromPlayer < lineOfSite && distanceFromPlayer > shootingRange)
-        {
-            transform.position = Vector2.MoveTowards(this.transform.position
-                , player.position, speed * Time.deltaTime);
-        }
-        else if (distanceFromPlayer <= shootingRange && nextFireTime > Time.time && nextFireTime < Time.time + 0.5f)
-        {
-            animator.SetBool("isShooting", true);
-        }
-        else if (distanceFromPlayer <= shootingRange &&
-            nextFireTime < Time.time)
+        if (distanceFromPlayer <= shootingRange &&
+                   nextFireTime < Time.time)
         {
             Instantiate(bullet, bulletParent.transform.position,
                 Quaternion.identity);
             nextFireTime = Time.time + fireRate;
-            animator.SetBool("isShooting", false);
-
         }
-        else
-        {
-            animator.SetBool("isShooting", false);
-        }
-
+   
     }
 
 
@@ -99,15 +81,13 @@ public class enemy2move : MonoBehaviour
         return 0;
     }
 
-
     private void increasePlayerGold()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Player script = player.GetComponent<Player>();
-        script.playerStats.gold += shooterGold;
+        script.playerStats.gold += turretGold;
 
     }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -119,6 +99,7 @@ public class enemy2move : MonoBehaviour
             {
                 increasePlayerGold();
                 Destroy(gameObject);
+                
             }
         }
     }
@@ -126,7 +107,6 @@ public class enemy2move : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, lineOfSite);
         Gizmos.DrawWireSphere(transform.position, shootingRange);
     }
 }

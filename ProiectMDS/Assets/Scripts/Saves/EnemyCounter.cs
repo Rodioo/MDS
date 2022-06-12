@@ -14,7 +14,11 @@ public class EnemyCounter : MonoBehaviour
         var spiderVector = GameObject.FindGameObjectsWithTag("Spider");
 
         var shooterVector  =   GameObject.FindGameObjectsWithTag("shooter");
-        if (spiderVector.Length == 0  && shooterVector.Length == 0)
+
+        var turretVector = GameObject.FindGameObjectsWithTag("turret");
+
+        if (spiderVector.Length == 0  && shooterVector.Length == 0 &&
+            turretVector.Length == 0)
         {
             nr = 0;
             // enemy camera 1 == 0;
