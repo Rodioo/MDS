@@ -138,13 +138,16 @@ public class Player : MonoBehaviour
         {
             GameObject item = collision.gameObject;
             Item script = item.GetComponent<Item>();
-
-            playerStats.spd += script.spd;
-            playerStats.hp += script.hp;
-            playerStats.maxHp += script.hp;
-            playerStats.dmg += script.dmg;
-            playerStats.bspd += script.bspd;
-            playerStats.aspd *= script.aspd;
+            if (script.price <= playerStats.gold)
+            {
+                playerStats.spd += script.spd;
+                playerStats.hp += script.hp;
+                playerStats.maxHp += script.hp;
+                playerStats.dmg += script.dmg;
+                playerStats.bspd += script.bspd;
+                playerStats.aspd *= script.aspd;
+                playerStats.gold -= script.price;
+            }
         }
     }
 }

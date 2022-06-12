@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8520626139255663641}
+  playerStats: {fileID: 11400000, guid: a8c4c3c7635261f47bf3d080c4771022, type: 2}
   firePoint: {fileID: 829198279}
   shurikenPrefab: {fileID: 8214246055790939148, guid: 50ecfa15fffa9d53e9fb6f0bb3c245b0, type: 3}
   bulletForce: 13

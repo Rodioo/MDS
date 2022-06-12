@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShootingNinja : MonoBehaviour
 {
     public Animator animator;
-
+    public GlobalStatus playerStats;
     public Transform firePoint;
     public GameObject shurikenPrefab;
 
@@ -16,10 +16,13 @@ public class ShootingNinja : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButton("Fire1") && Time.time > nextFire)
+        if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
-            nextFire = Time.time + fireRate;
             animator.SetBool("IsShooting", true);
+            bulletForce = playerStats.bspd;
+            bulletDamage = playerStats.dmg;
+            fireRate = playerStats.aspd;
+            nextFire = Time.time + fireRate;
             Shoot();
         }
         else

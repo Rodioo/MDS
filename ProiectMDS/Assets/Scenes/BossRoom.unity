@@ -1440,6 +1440,10 @@ PrefabInstance:
       propertyPath: moveSpots.Array.data[7]
       value: 
       objectReference: {fileID: 469571604}
+    - target: {fileID: 1812923812, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5973421922021847712, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
       propertyPath: m_Name
       value: Boss

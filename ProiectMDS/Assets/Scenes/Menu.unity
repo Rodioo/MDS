@@ -1167,35 +1167,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 505, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1261891548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8520626139255663638, guid: f2ebffac3313d6c2dbd4f6fba34d9529, type: 3}
-  m_PrefabInstance: {fileID: 2038820493}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1261891549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261891548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29e63906b024bfeb977f1ae08013894, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1261891550}
-  firePoint: {fileID: 829198279}
-  shurikenPrefab: {fileID: 8214246055790939148, guid: 50ecfa15fffa9d53e9fb6f0bb3c245b0, type: 3}
-  bulletForce: 5
-  bulletDamage: 10
-  fireRate: 1
-  nextFire: 0
---- !u!95 &1261891550 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8520626139255663641, guid: f2ebffac3313d6c2dbd4f6fba34d9529, type: 3}
-  m_PrefabInstance: {fileID: 2038820493}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1261891554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8520626139255663642, guid: f2ebffac3313d6c2dbd4f6fba34d9529, type: 3}

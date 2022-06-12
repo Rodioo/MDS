@@ -19,6 +19,7 @@ public class MenuCollision : MonoBehaviour
         {
             SceneManager.LoadScene(1);
             globalPlayer.hp = 100;
+            globalPlayer.maxHp = 100;
             globalPlayer.gold = 0;
             globalPlayer.dmg = 15;
             globalPlayer.aspd = 1f;
