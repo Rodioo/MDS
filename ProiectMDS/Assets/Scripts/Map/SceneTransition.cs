@@ -42,6 +42,7 @@ public class SceneTransition : MonoBehaviour
             roomService.rooms[SceneManager.GetActiveScene().buildIndex] = true;
             playerStats.initPosition = transitionPosition;
             SceneManager.LoadScene(scene);
+            roomService.lastRoom=scene;
         }
 
     }

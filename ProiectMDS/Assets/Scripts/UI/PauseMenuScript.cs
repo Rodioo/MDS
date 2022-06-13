@@ -9,7 +9,6 @@ public class PauseMenuScript : MonoBehaviour
     public static bool isPaused = false;
 
     public GameObject pauseMenuUI;
-    public GlobalStatus globalPlayer;
 
     void Update()
     {
@@ -45,7 +44,6 @@ public class PauseMenuScript : MonoBehaviour
         Destroy(GameObject.FindGameObjectWithTag("Music"));
         resumeGame();
         SceneManager.LoadScene(0);
-        globalPlayer.initPosition = new Vector2(-5, 0);
     }
 
     public void quitGame()

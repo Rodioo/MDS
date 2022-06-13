@@ -18,27 +18,10 @@ public class MenuCollision : MonoBehaviour
         Transform textTransform = col.gameObject.transform.parent;
 
         //Main Menu Choices
-        if (textTransform.name == "NewGame_Text")
+
+        if (textTransform.name == "ContinueGame_Text")
         {
-            SceneManager.LoadScene(1);
-
-            globalPlayer.resetStats();
-
-            for (int i= 0; i<=16; ++i)
-            {
-                roomService.rooms[i] = false;
-            }
-
-            for (int i = 0; i <= 3; ++i)
-            {
-                globalPlayer.items[i] = false;
-            }
-
-        }
-        else if (textTransform.name == "ContinueGame_Text")
-        {
-            SceneManager.LoadScene(1);
-            globalPlayer.initPosition = new Vector2(1, 1);
+            SceneManager.LoadScene(roomService.lastRoom);
 
         }
         else if (textTransform.name == "Settings_Text")
@@ -147,8 +130,8 @@ public class MenuCollision : MonoBehaviour
             GameObject switchMenu = textTransform.parent.parent.Find("SwitchMenu").gameObject;
             switchMenu.SetActive(false);
             mainMenu.SetActive(true);
-
-            SceneManager.LoadScene(1);
+            roomService.lastRoom = "Main";
+            SceneManager.LoadScene(roomService.lastRoom);
             if (caracter == 1)
             {
                 globalPlayer.resetStats();

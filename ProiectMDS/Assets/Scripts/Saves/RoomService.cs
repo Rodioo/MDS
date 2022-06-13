@@ -6,5 +6,6 @@ using UnityEngine;
 public class RoomService : ScriptableObject
 {
     public bool[] rooms = new bool [17];
+    public string lastRoom = "Main";
 
 }
