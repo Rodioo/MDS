@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class turret : MonoBehaviour
 {
+    public GlobalStatus playerStatus;
+
 
     public float shootingRange;
 
@@ -30,6 +32,20 @@ public class turret : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (playerStatus.difficulty == 2)
+        {
+            hp += 5;
+            damage += 5;
+            fireRate -= 0.2f;
+        }
+        else if (playerStatus.difficulty == 3)
+        {
+            hp += 10;
+            damage += 10;
+            fireRate -= 0.3f;
+        }
+
+
         if (roomService.rooms[SceneManager.GetActiveScene().buildIndex])
         {
             Destroy(gameObject);

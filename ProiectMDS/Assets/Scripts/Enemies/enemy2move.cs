@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class enemy2move : MonoBehaviour
 {
+    public GlobalStatus playerStatus;
+
 
     public float speed;
     public Animator animator;
@@ -33,6 +35,22 @@ public class enemy2move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (playerStatus.difficulty == 2)
+        {
+            hp += 5;
+            damage += 5;
+            speed += 1;
+            fireRate -= 0.2f;
+        }
+        else if (playerStatus.difficulty == 3)
+        {
+            hp += 10;
+            damage += 10;
+            speed += 2;
+            fireRate -= 0.4f;
+        }
+
+
         if (roomService.rooms[SceneManager.GetActiveScene().buildIndex])
         {
             Destroy(gameObject);

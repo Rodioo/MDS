@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47fedee1ede59b43b6a211f9b8194d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStatus: {fileID: 11400000, guid: a8c4c3c7635261f47bf3d080c4771022, type: 2}
   shootingRange: 21.01
   fireRate: 2
   bullet: {fileID: 4435501373795210950, guid: 9c0f3a6e80d6a204fbf8ea5c3567b2a0, type: 3}

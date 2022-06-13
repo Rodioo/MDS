@@ -98,10 +98,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c6d71158d32db4d9ecfaf671a4efe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyStats: {fileID: 11400000, guid: a1967b989ffb2444697d2653de16f643, type: 2}
+  playerStatus: {fileID: 11400000, guid: a8c4c3c7635261f47bf3d080c4771022, type: 2}
   animator: {fileID: 0}
-  moveSpeed: 8
+  moveSpeed: 5
   hp: 30
   damage: 20
+  spiderGold: 0
   roomService: {fileID: 11400000, guid: ac416cceb118ba7418119313ee923bd8, type: 2}
 --- !u!50 &5197573931737134616
 Rigidbody2D:

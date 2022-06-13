@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5adb6e18ef3d2af45b75b753570a912d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStatus: {fileID: 11400000, guid: a8c4c3c7635261f47bf3d080c4771022, type: 2}
   speed: 2.99
   animator: {fileID: 2058681432}
   shootingRange: 11.71
