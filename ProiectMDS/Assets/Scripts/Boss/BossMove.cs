@@ -23,6 +23,9 @@ public class BossMove : MonoBehaviour
     private int randomSpot;
     private Rigidbody2D rb;
 
+    public GameObject ui;
+    public GameObject gameOver;
+
     void Start()
     {
         randomSpot = Random.Range(0, moveSpots.Length);
@@ -80,7 +83,14 @@ public class BossMove : MonoBehaviour
             hp -= damage;
             if (hp <= 0)
             {
+                ui.SetActive(false);
+                gameOver.SetActive(true);
                 Destroy(gameObject);
+            }
+            else
+            {
+                ui.SetActive(true);
+                gameOver.SetActive(false);
             }
         }
     }
