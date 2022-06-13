@@ -38,6 +38,7 @@ public class turretBullet : MonoBehaviour
 
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         target -= val;
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
 
