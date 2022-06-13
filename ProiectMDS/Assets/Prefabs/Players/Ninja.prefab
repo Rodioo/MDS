@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: a8c4c3c7635261f47bf3d080c4771022, type: 2}
+  roomService: {fileID: 11400000, guid: ac416cceb118ba7418119313ee923bd8, type: 2}
   moveSpeed: 10
   rb: {fileID: 8520626139255663636}
   cam: {fileID: 0}

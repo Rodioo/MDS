@@ -10,6 +10,7 @@ public class MenuCollision : MonoBehaviour
     private static bool isNinja = true;
     public static int volume = 10;
     public static int difficulty = 1;
+    public static int caracter = 1;
 
 
     public static void checkMenuHit(Collider2D col, GlobalStatus globalPlayer, RoomService roomService)
@@ -30,9 +31,9 @@ public class MenuCollision : MonoBehaviour
             globalPlayer.initPosition = new Vector2(1, 1);
 
             globalPlayer.difficulty = difficulty;
-         
+            globalPlayer.caracter = caracter;
 
-            for(int i= 0; i<=16; ++i)
+            for (int i= 0; i<=16; ++i)
             {
                 roomService.rooms[i] = false;
             }
@@ -119,6 +120,8 @@ public class MenuCollision : MonoBehaviour
         //Switch Menu Choices
         else if (textTransform.name == "SwitchCharacter_Text")
         {
+            caracter = 2;
+            globalPlayer.caracter = 2;
             GameObject mainMenu = textTransform.parent.parent.Find("MainMenu").gameObject;
             GameObject switchMenu = textTransform.parent.parent.Find("SwitchMenu").gameObject;
             mainMenu.SetActive(false);
@@ -126,6 +129,8 @@ public class MenuCollision : MonoBehaviour
         }
         else if (textTransform.name == "Left_Text" || textTransform.name == "Right_Text")
         {
+            caracter = 2;
+            globalPlayer.caracter = 2;
             GameObject ninja = textTransform.parent.Find("Characters").Find("Ninja").gameObject;
             GameObject archer = textTransform.parent.Find("Characters").Find("Archer").gameObject;
             if (isNinja)
@@ -133,12 +138,16 @@ public class MenuCollision : MonoBehaviour
                 isNinja = false;
                 ninja.SetActive(false);
                 archer.SetActive(true);
+                globalPlayer.caracter = 1;
+                caracter = 1;
             }
             else
             {
                 isNinja = true;
                 archer.SetActive(false);
                 ninja.SetActive(true);
+                globalPlayer.caracter = 2;
+                caracter = 2;
             }
         }
         else if (textTransform.name == "Confirm_Text")
@@ -149,6 +158,29 @@ public class MenuCollision : MonoBehaviour
             GameObject switchMenu = textTransform.parent.parent.Find("SwitchMenu").gameObject;
             switchMenu.SetActive(false);
             mainMenu.SetActive(true);
+
+            SceneManager.LoadScene(1);
+            globalPlayer.hp = 100;
+            globalPlayer.maxHp = 100;
+            globalPlayer.gold = 0;
+            globalPlayer.dmg = 15;
+            globalPlayer.aspd = 1f;
+            globalPlayer.bspd = 7f;
+            globalPlayer.spd = 6f;
+            globalPlayer.initPosition = new Vector2(1, 1);
+
+            globalPlayer.difficulty = difficulty;
+            globalPlayer.caracter = caracter;
+
+            for (int i = 0; i <= 16; ++i)
+            {
+                roomService.rooms[i] = false;
+            }
+
+            for (int i = 0; i <= 3; ++i)
+            {
+                globalPlayer.items[i] = false;
+            }
         }
         else if (textTransform.name == "Quit_Text")
         {

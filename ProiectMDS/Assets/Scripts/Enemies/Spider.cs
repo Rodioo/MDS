@@ -29,6 +29,7 @@ public class Spider : MonoBehaviour
         hp = enemyStats.hpSpider;
         damage = enemyStats.dmgSpider;
         moveSpeed = enemyStats.speedSpider;
+       
 
         if (playerStatus.difficulty == 2)
         {
@@ -59,7 +60,7 @@ public class Spider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
         Vector3 direction = player.position - transform.position;
         //Debug.Log(direction);

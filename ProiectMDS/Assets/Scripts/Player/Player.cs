@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
     public GlobalStatus playerStats;
+
+    //public RoomService roomService;
+
     public float moveSpeed = 3f;
 
     public Rigidbody2D rb;
@@ -25,6 +30,31 @@ public class Player : MonoBehaviour
     private void Start()
     {
         transform.position = playerStats.initPosition;
+
+        //Debug.Log(SceneManager.GetActiveScene().buildIndex);
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            transform.position = new Vector2 (-4,0);
+        }
+
+
+        Debug.Log(gameObject.name);
+        //if (SceneManager.GetActiveScene().buildIndex == 1)
+        //{
+        Debug.Log(playerStats.caracter);
+        if (playerStats.caracter == 1 && gameObject.name == "Ninja")
+        {
+            // destroy ninja
+            // GameObject  = GameObject.FindGameObjectWithTag("turret");
+            Destroy(gameObject);
+        }
+        else if (playerStats.caracter == 2 && gameObject.name == "Archer")
+        {
+            // destroy archer
+            Destroy(gameObject);
+        }
+        
+
         moveSpeed = playerStats.spd;
         timeSinceLastHit = Time.time;
         isHit = false;
@@ -37,6 +67,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        
+       
+
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
