@@ -140,7 +140,7 @@ public class Player : MonoBehaviour
             {
                 gameOver.SetActive(true);
                 Button menuButton = gameOver.transform.Find("MenuButton").gameObject.GetComponent<Button>();
-                menuButton.onClick.AddListener(() => playerStats.resetStats());
+                menuButton.onClick.AddListener(() => { playerStats.reset = true; });
             }
             else
             {
@@ -163,7 +163,7 @@ public class Player : MonoBehaviour
             {
                 gameOver.SetActive(true);
                 Button menuButton = gameOver.transform.Find("MenuButton").gameObject.GetComponent<Button>();
-                menuButton.onClick.AddListener(() => playerStats.resetStats());
+                menuButton.onClick.AddListener(() => { playerStats.reset = true; });
             }
             else
             {

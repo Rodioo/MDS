@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GlobalStatus : ScriptableObject
 {
+    public bool reset = true;
     public Vector2 initPosition;
     public int hp = 100;
     public int maxHp = 100;

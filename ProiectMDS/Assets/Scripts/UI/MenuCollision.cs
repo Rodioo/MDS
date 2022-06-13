@@ -19,7 +19,7 @@ public class MenuCollision : MonoBehaviour
 
         //Main Menu Choices
 
-        if (textTransform.name == "ContinueGame_Text")
+        if (textTransform.name == "ContinueGame_Text" && globalPlayer.reset==false)
         {
             SceneManager.LoadScene(roomService.lastRoom);
 
@@ -136,6 +136,7 @@ public class MenuCollision : MonoBehaviour
             if (caracter == 1)
             {
                 globalPlayer.resetStats();
+                globalPlayer.reset = false;
 
                 for (int i = 0; i <= 16; ++i)
                 {
