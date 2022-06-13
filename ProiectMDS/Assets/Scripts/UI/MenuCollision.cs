@@ -21,17 +21,8 @@ public class MenuCollision : MonoBehaviour
         if (textTransform.name == "NewGame_Text")
         {
             SceneManager.LoadScene(1);
-            globalPlayer.hp = 100;
-            globalPlayer.maxHp = 100;
-            globalPlayer.gold = 0;
-            globalPlayer.dmg = 15;
-            globalPlayer.aspd = 1f;
-            globalPlayer.bspd = 7f;
-            globalPlayer.spd = 6f;
-            globalPlayer.initPosition = new Vector2(1, 1);
 
-            globalPlayer.difficulty = difficulty;
-            globalPlayer.caracter = caracter;
+            globalPlayer.resetStats();
 
             for (int i= 0; i<=16; ++i)
             {
@@ -89,8 +80,7 @@ public class MenuCollision : MonoBehaviour
             difficulty = Int32.Parse(difficultyText.text.Split(':')[1]);
             if (difficulty > 1)
                 difficulty--;
-            float scaledDiff = difficulty / 10f;
-            PlayerPrefs.SetFloat("difficulty", scaledDiff);
+
             difficultyText.text = "Difficulty:" + difficulty;
 
             globalPlayer.difficulty = difficulty;
@@ -102,8 +92,7 @@ public class MenuCollision : MonoBehaviour
             difficulty = Int32.Parse(difficultyText.text.Split(':')[1]);
             if (difficulty < 3)
                 difficulty ++ ;
-            float scaledDiff = difficulty / 10f;
-            PlayerPrefs.SetFloat("difficulty", scaledDiff);
+
             difficultyText.text = "Difficulty:" + difficulty;
 
             globalPlayer.difficulty = difficulty;
@@ -162,17 +151,7 @@ public class MenuCollision : MonoBehaviour
             SceneManager.LoadScene(1);
             if (caracter == 1)
             {
-                globalPlayer.hp = 100;
-                globalPlayer.maxHp = 100;
-                globalPlayer.gold = 0;
-                globalPlayer.dmg = 15;
-                globalPlayer.aspd = 0.8f;
-                globalPlayer.bspd = 7f;
-                globalPlayer.spd = 6f;
-                globalPlayer.initPosition = new Vector2(1, 1);
-
-                globalPlayer.difficulty = difficulty;
-                globalPlayer.caracter = caracter;
+                globalPlayer.resetStats();
 
                 for (int i = 0; i <= 16; ++i)
                 {
@@ -186,17 +165,7 @@ public class MenuCollision : MonoBehaviour
             }
             if (caracter == 2)
             {
-                globalPlayer.hp = 75;
-                globalPlayer.maxHp = 75;
-                globalPlayer.gold = 0;
-                globalPlayer.dmg = 10;
-                globalPlayer.aspd = 0.5f;
-                globalPlayer.bspd = 9f;
-                globalPlayer.spd = 8f;
-                globalPlayer.initPosition = new Vector2(1, 1);
-
-                globalPlayer.difficulty = difficulty;
-                globalPlayer.caracter = caracter;
+                globalPlayer.resetStats();
 
                 for (int i = 0; i <= 16; ++i)
                 {

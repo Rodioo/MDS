@@ -249,7 +249,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4706904355735492856, guid: 0c15abf894770904ea2c5bde496c6cbb, type: 3}
       propertyPath: m_fontSize
-      value: 60.75
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706904355735492856, guid: 0c15abf894770904ea2c5bde496c6cbb, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706904355735492856, guid: 0c15abf894770904ea2c5bde496c6cbb, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4706904355735492857, guid: 0c15abf894770904ea2c5bde496c6cbb, type: 3}
       propertyPath: m_Pivot.x
@@ -904,6 +912,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 229783674}
     - target: {fileID: 8724920708139399721, guid: 4d0b56d5cc5b48f4683b441407fc3513, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 7802994559696077989, guid: 87b41901da71f594e9c2a4e2bbc6474e, type: 3}
+    - target: {fileID: 8724920708139399721, guid: 4d0b56d5cc5b48f4683b441407fc3513, type: 3}
       propertyPath: currencyScript
       value: 
       objectReference: {fileID: 7930065801039590733, guid: b118778271a5d884e8f6f0932135671f, type: 3}
@@ -1398,6 +1410,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 229783674}
+    - target: {fileID: 8520626139255663637, guid: f2ebffac3313d6c2dbd4f6fba34d9529, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 7802994559696077989, guid: 87b41901da71f594e9c2a4e2bbc6474e, type: 3}
     - target: {fileID: 8520626139255663637, guid: f2ebffac3313d6c2dbd4f6fba34d9529, type: 3}
       propertyPath: currencyScript
       value: 
