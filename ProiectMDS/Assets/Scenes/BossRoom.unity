@@ -1411,6 +1411,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 99291560}
     - target: {fileID: 8724920708139399721, guid: 4d0b56d5cc5b48f4683b441407fc3513, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 2089832394}
+    - target: {fileID: 8724920708139399721, guid: 4d0b56d5cc5b48f4683b441407fc3513, type: 3}
       propertyPath: currencyScript
       value: 
       objectReference: {fileID: 1593232365}
@@ -1471,6 +1475,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1519755624, guid: 07a31e8f4a0b6c64eb4400bb3a2c2c42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 301505623923144127, guid: 07a31e8f4a0b6c64eb4400bb3a2c2c42, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085105699627385296, guid: 07a31e8f4a0b6c64eb4400bb3a2c2c42, type: 3}
+      propertyPath: m_Text
+      value: 'GAME OVER!
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616905782461898659, guid: 07a31e8f4a0b6c64eb4400bb3a2c2c42, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5292579498769114218, guid: 07a31e8f4a0b6c64eb4400bb3a2c2c42, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1575,6 +1597,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8519452770474858571, guid: 07a31e8f4a0b6c64eb4400bb3a2c2c42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07a31e8f4a0b6c64eb4400bb3a2c2c42, type: 3}
 --- !u!114 &1593232365 stripped
@@ -1610,6 +1636,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 99291560}
+    - target: {fileID: 8520626139255663637, guid: f2ebffac3313d6c2dbd4f6fba34d9529, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 2089832394}
     - target: {fileID: 8520626139255663637, guid: f2ebffac3313d6c2dbd4f6fba34d9529, type: 3}
       propertyPath: currencyScript
       value: 
@@ -1681,7 +1711,7 @@ GameObject:
   - component: {fileID: 1642653146}
   - component: {fileID: 1642653145}
   m_Layer: 5
-  m_Name: GameOver
+  m_Name: GameWon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1780,7 +1810,7 @@ GameObject:
   - component: {fileID: 1846117185}
   - component: {fileID: 1846117184}
   m_Layer: 5
-  m_Name: GameOver
+  m_Name: GameWon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1994,6 +2024,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bf686bae15af0488b82416343f4c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2089832394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8519452770474858571, guid: 07a31e8f4a0b6c64eb4400bb3a2c2c42, type: 3}
+  m_PrefabInstance: {fileID: 1593232364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5730241262946085344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2009,6 +2044,10 @@ PrefabInstance:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 1642653144}
+    - target: {fileID: -8166230775341893927, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 11400000, guid: a8c4c3c7635261f47bf3d080c4771022, type: 2}
     - target: {fileID: -8166230775341893927, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
       propertyPath: moveSpots.Array.data[0]
       value: 

@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class Player : MonoBehaviour
 {
     public GlobalStatus playerStats;
-
-    //public RoomService roomService;
 
     public float moveSpeed = 3f;
 
@@ -27,30 +26,24 @@ public class Player : MonoBehaviour
 
     public CurrencyScript currencyScript;
 
+    public GameObject gameOver;
+
     private void Start()
     {
         transform.position = playerStats.initPosition;
 
-        //Debug.Log(SceneManager.GetActiveScene().buildIndex);
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             transform.position = new Vector2 (-4,0);
         }
 
 
-        Debug.Log(gameObject.name);
-        //if (SceneManager.GetActiveScene().buildIndex == 1)
-        //{
-        Debug.Log(playerStats.caracter);
         if (playerStats.caracter == 1 && gameObject.name == "Ninja")
         {
-            // destroy ninja
-            // GameObject  = GameObject.FindGameObjectWithTag("turret");
             Destroy(gameObject);
         }
         else if (playerStats.caracter == 2 && gameObject.name == "Archer")
         {
-            // destroy archer
             Destroy(gameObject);
         }
         
@@ -67,9 +60,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
-       
-
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -148,7 +138,13 @@ public class Player : MonoBehaviour
             }
             if(playerStats.hp <= 0)
             {
-                Debug.Log("GG");
+                gameOver.SetActive(true);
+                Button menuButton = gameOver.transform.Find("MenuButton").gameObject.GetComponent<Button>();
+                menuButton.onClick.AddListener(() => playerStats.resetStats());
+            }
+            else
+            {
+                gameOver.SetActive(false);
             }
         }
     }
@@ -165,7 +161,13 @@ public class Player : MonoBehaviour
             }
             if (playerStats.hp <= 0)
             {
-                Debug.Log("GG");
+                gameOver.SetActive(true);
+                Button menuButton = gameOver.transform.Find("MenuButton").gameObject.GetComponent<Button>();
+                menuButton.onClick.AddListener(() => playerStats.resetStats());
+            }
+            else
+            {
+                gameOver.SetActive(false);
             }
         }
         if (collision.gameObject.CompareTag("Item"))

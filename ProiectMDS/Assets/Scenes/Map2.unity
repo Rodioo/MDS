@@ -430,6 +430,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a9835eade45615408a2ba8c6a6dc2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &685986953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8519452770474858571, guid: 07a31e8f4a0b6c64eb4400bb3a2c2c42, type: 3}
+  m_PrefabInstance: {fileID: 685986950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &865286574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -441,6 +446,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 350752724}
+    - target: {fileID: 8520626139255663637, guid: f2ebffac3313d6c2dbd4f6fba34d9529, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 685986953}
     - target: {fileID: 8520626139255663637, guid: f2ebffac3313d6c2dbd4f6fba34d9529, type: 3}
       propertyPath: currencyScript
       value: 
@@ -1666,6 +1675,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 350752724}
+    - target: {fileID: 8724920708139399721, guid: 4d0b56d5cc5b48f4683b441407fc3513, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 685986953}
     - target: {fileID: 8724920708139399721, guid: 4d0b56d5cc5b48f4683b441407fc3513, type: 3}
       propertyPath: currencyScript
       value: 

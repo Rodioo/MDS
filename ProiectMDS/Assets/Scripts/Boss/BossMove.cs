@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossMove : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class BossMove : MonoBehaviour
 
     public GameObject ui;
     public GameObject gameOver;
+
+    public GlobalStatus playerStats;
 
     void Start()
     {
@@ -85,6 +88,8 @@ public class BossMove : MonoBehaviour
             {
                 ui.SetActive(false);
                 gameOver.SetActive(true);
+                Button menuButton = gameOver.transform.Find("MenuButton").gameObject.GetComponent<Button>();
+                menuButton.onClick.AddListener(() => playerStats.resetStats());
                 Destroy(gameObject);
             }
             else

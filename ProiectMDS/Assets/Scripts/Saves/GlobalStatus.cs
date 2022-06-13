@@ -6,8 +6,8 @@ using UnityEngine;
 public class GlobalStatus : ScriptableObject
 {
     public Vector2 initPosition;
-    public int hp = 200;
-    public int maxHp = 200;
+    public int hp = 100;
+    public int maxHp = 100;
     public int gold = 0;
     public int dmg = 15;
     public float aspd = 1f;
@@ -20,12 +20,16 @@ public class GlobalStatus : ScriptableObject
     public int difficulty = MenuCollision.difficulty;
 
     public int caracter = 1;
+
+    public void resetStats()
+    {
+        hp = 100;
+        maxHp = 100;
+        gold = 0;
+        dmg = 15;
+        aspd = 1f;
+        bspd = 7f;
+        spd = 6f;
+        initPosition = new Vector2(1, 1);
+    }
 }
-/*
-public int hp = 100;
-public int gold = 0;
-public int dmg = 15;
-public float aspd = 1f;
-public float bspd = 5f;
-public float spd = 3f;
-*/
