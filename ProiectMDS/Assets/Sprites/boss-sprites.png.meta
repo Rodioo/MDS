@@ -295,10 +295,10 @@ TextureImporter:
       name: tail1
       rect:
         serializedVersion: 2
-        x: 20
-        y: 59
-        width: 62
-        height: 13
+        x: 37
+        y: 58
+        width: 45
+        height: 15
       alignment: 9
       pivot: {x: 0.873, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +316,10 @@ TextureImporter:
       name: tail2
       rect:
         serializedVersion: 2
-        x: 20
-        y: 39
-        width: 62
-        height: 13
+        x: 36
+        y: 38
+        width: 46
+        height: 15
       alignment: 9
       pivot: {x: 0.873, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: tail3
       rect:
         serializedVersion: 2
-        x: 14
-        y: 21
-        width: 68
-        height: 11
+        x: 36
+        y: 19
+        width: 46
+        height: 15
       alignment: 9
       pivot: {x: 0.873, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
