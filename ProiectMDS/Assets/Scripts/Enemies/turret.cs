@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class turret : MonoBehaviour
 {
     public GlobalStatus playerStatus;
+    public Animator animator;
 
 
     public float shootingRange;
@@ -67,18 +68,23 @@ public class turret : MonoBehaviour
 
         Vector3 direction = player.position - transform.position;
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
+        /*float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        rb.rotation = angle;*/
 
         float distanceFromPlayer = Vector2.Distance(player.position,
             transform.position);
 
-        if (distanceFromPlayer <= shootingRange &&
+        if (distanceFromPlayer <= shootingRange && nextFireTime > Time.time && nextFireTime < Time.time + 0.5f)
+        {
+            animator.SetBool("isShooting", true);
+        }
+        else if (distanceFromPlayer <= shootingRange &&
                    nextFireTime < Time.time)
         {
             Instantiate(bullet, bulletParent.transform.position,
                 Quaternion.identity);
             nextFireTime = Time.time + fireRate;
+            animator.SetBool("isShooting", false);
         }
    
     }

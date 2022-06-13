@@ -19,6 +19,7 @@ public class turretBullet : MonoBehaviour
     {
         Physics2D.IgnoreLayerCollision(10, 10);
         Physics2D.IgnoreLayerCollision(6, 10);
+        Physics2D.IgnoreLayerCollision(8, 10);
         bulletRB = GetComponent<Rigidbody2D>();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
