@@ -9,6 +9,8 @@ public class MenuCollision : MonoBehaviour
 {
     private static bool isNinja = true;
     public static int volume = 10;
+    public static int difficulty = 1;
+
 
     public static void checkMenuHit(Collider2D col, GlobalStatus globalPlayer, RoomService roomService)
     {
@@ -26,6 +28,9 @@ public class MenuCollision : MonoBehaviour
             globalPlayer.bspd = 7f;
             globalPlayer.spd = 6f;
             globalPlayer.initPosition = new Vector2(1, 1);
+
+            globalPlayer.difficulty = difficulty;
+         
 
             for(int i= 0; i<=16; ++i)
             {
@@ -76,6 +81,34 @@ public class MenuCollision : MonoBehaviour
             volume_text.text = "Volume:" + volume;
             globalPlayer.volume = volume;
         }
+        else if (textTransform.name == "Difficulty-")
+        {
+            TextMeshProUGUI difficultyText = textTransform.parent.Find("DifficultyText")
+                .gameObject.GetComponent<TextMeshProUGUI>();
+            difficulty = Int32.Parse(difficultyText.text.Split(':')[1]);
+            if (difficulty > 1)
+                difficulty--;
+            float scaledDiff = difficulty / 10f;
+            PlayerPrefs.SetFloat("difficulty", scaledDiff);
+            difficultyText.text = "Difficulty:" + difficulty;
+
+            globalPlayer.difficulty = difficulty;
+        }
+        else if (textTransform.name == "Difficulty+")
+        {
+            TextMeshProUGUI difficultyText = textTransform.parent.Find("DifficultyText")
+               .gameObject.GetComponent<TextMeshProUGUI>();
+            difficulty = Int32.Parse(difficultyText.text.Split(':')[1]);
+            if (difficulty < 3)
+                difficulty ++ ;
+            float scaledDiff = difficulty / 10f;
+            PlayerPrefs.SetFloat("difficulty", scaledDiff);
+            difficultyText.text = "Difficulty:" + difficulty;
+
+            globalPlayer.difficulty = difficulty;
+        }
+
+
         else if (textTransform.name == "Back_Text")
         {
             GameObject mainMenu = textTransform.parent.parent.Find("MainMenu").gameObject;

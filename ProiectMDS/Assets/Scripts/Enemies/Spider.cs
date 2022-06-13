@@ -6,15 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class Spider : MonoBehaviour
 {
+    public GlobalEnemyStats enemyStats;
+    public GlobalStatus playerStatus;
+
+
     public Animator animator;
 
     private Transform player;
     private Rigidbody2D rb;
     private Vector2 movement;
-    public float moveSpeed = 1f;
-    public int hp = 30;
+    public float moveSpeed;
+    public int hp =  30;
     public int damage = 20;
-    private int spiderGold;
+    public int spiderGold;
 
     public RoomService roomService;
 
@@ -22,6 +26,25 @@ public class Spider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hp = enemyStats.hpSpider;
+        damage = enemyStats.dmgSpider;
+        moveSpeed = enemyStats.speedSpider;
+
+        if (playerStatus.difficulty == 2)
+        {
+            hp += 10;
+            damage += 5;
+            moveSpeed += 1;
+        }
+        else if(playerStatus.difficulty == 3)
+        {
+            hp += 20;
+            damage += 10;
+            moveSpeed += 2;
+        }
+
+       
+
         if (roomService.rooms[SceneManager.GetActiveScene().buildIndex])
         {
             Destroy(gameObject);
@@ -36,6 +59,8 @@ public class Spider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         Vector3 direction = player.position - transform.position;
         //Debug.Log(direction);
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -54,11 +79,13 @@ public class Spider : MonoBehaviour
     void moveCharacter(Vector2 direction)
     {   if(direction.x!=0 && direction.y!=0)
         {
-            rb.MovePosition((Vector2)transform.position + (direction * moveSpeed/2 * Time.deltaTime));
+            rb.MovePosition((Vector2)transform.position + 
+                (direction * moveSpeed / 2 * Time.deltaTime));
         }
         else
         {
-            rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+            rb.MovePosition((Vector2)transform.position + 
+                (direction * moveSpeed * Time.deltaTime));
         }
     }
 
