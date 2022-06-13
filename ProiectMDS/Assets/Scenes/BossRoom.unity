@@ -2041,6 +2041,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1941202801}
     - target: {fileID: -8166230775341893927, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
+      propertyPath: gameWon
+      value: 
+      objectReference: {fileID: 1642653144}
+    - target: {fileID: -8166230775341893927, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 1642653144}

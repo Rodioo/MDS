@@ -131,7 +131,8 @@ public class MenuCollision : MonoBehaviour
             switchMenu.SetActive(false);
             mainMenu.SetActive(true);
             roomService.lastRoom = "Main";
-            SceneManager.LoadScene(roomService.lastRoom);
+            SceneManager.LoadScene(roomService.lastRoom);        
+
             if (caracter == 1)
             {
                 globalPlayer.resetStats();
@@ -148,7 +149,8 @@ public class MenuCollision : MonoBehaviour
             }
             if (caracter == 2)
             {
-                globalPlayer.resetStats();
+                globalPlayer.ninjaStats();
+
 
                 for (int i = 0; i <= 16; ++i)
                 {
