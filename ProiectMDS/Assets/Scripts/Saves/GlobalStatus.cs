@@ -18,6 +18,8 @@ public class GlobalStatus : ScriptableObject
     public int volume = MenuCollision.volume;
 
     public int difficulty = MenuCollision.difficulty;
+
+    public int caracter = 1;
 }
 /*
 public int hp = 100;
