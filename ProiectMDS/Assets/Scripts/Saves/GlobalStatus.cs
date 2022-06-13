@@ -27,9 +27,21 @@ public class GlobalStatus : ScriptableObject
         maxHp = 100;
         gold = 0;
         dmg = 15;
-        aspd = 1f;
+        aspd = 0.85f;
         bspd = 7f;
         spd = 6f;
+        initPosition = new Vector2(1, 1);
+    }
+
+    public void ninjaStats()
+    {
+        hp = 75;
+        maxHp = 75;
+        gold = 0;
+        dmg = 10;
+        aspd = 0.6f;
+        bspd = 9f;
+        spd = 8f;
         initPosition = new Vector2(1, 1);
     }
 }

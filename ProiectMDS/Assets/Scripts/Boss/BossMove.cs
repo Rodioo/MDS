@@ -25,7 +25,7 @@ public class BossMove : MonoBehaviour
     private Rigidbody2D rb;
 
     public GameObject ui;
-    public GameObject gameOver;
+    public GameObject gameWon;
 
     public GlobalStatus playerStats;
 
@@ -87,15 +87,16 @@ public class BossMove : MonoBehaviour
             if (hp <= 0)
             {
                 ui.SetActive(false);
-                gameOver.SetActive(true);
-                Button menuButton = gameOver.transform.Find("MenuButton").gameObject.GetComponent<Button>();
+                gameWon.SetActive(true);
+                Button menuButton = gameWon.transform.Find("MenuButton")
+                    .gameObject.GetComponent<Button>();
                 menuButton.onClick.AddListener(() => playerStats.resetStats());
                 Destroy(gameObject);
             }
             else
             {
                 ui.SetActive(true);
-                gameOver.SetActive(false);
+                gameWon.SetActive(false);
             }
         }
     }
