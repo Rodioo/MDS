@@ -160,26 +160,53 @@ public class MenuCollision : MonoBehaviour
             mainMenu.SetActive(true);
 
             SceneManager.LoadScene(1);
-            globalPlayer.hp = 100;
-            globalPlayer.maxHp = 100;
-            globalPlayer.gold = 0;
-            globalPlayer.dmg = 15;
-            globalPlayer.aspd = 1f;
-            globalPlayer.bspd = 7f;
-            globalPlayer.spd = 6f;
-            globalPlayer.initPosition = new Vector2(1, 1);
-
-            globalPlayer.difficulty = difficulty;
-            globalPlayer.caracter = caracter;
-
-            for (int i = 0; i <= 16; ++i)
+            if (caracter == 1)
             {
-                roomService.rooms[i] = false;
+                globalPlayer.hp = 100;
+                globalPlayer.maxHp = 100;
+                globalPlayer.gold = 0;
+                globalPlayer.dmg = 15;
+                globalPlayer.aspd = 0.8f;
+                globalPlayer.bspd = 7f;
+                globalPlayer.spd = 6f;
+                globalPlayer.initPosition = new Vector2(1, 1);
+
+                globalPlayer.difficulty = difficulty;
+                globalPlayer.caracter = caracter;
+
+                for (int i = 0; i <= 16; ++i)
+                {
+                    roomService.rooms[i] = false;
+                }
+
+                for (int i = 0; i <= 3; ++i)
+                {
+                    globalPlayer.items[i] = false;
+                }
             }
-
-            for (int i = 0; i <= 3; ++i)
+            if (caracter == 2)
             {
-                globalPlayer.items[i] = false;
+                globalPlayer.hp = 75;
+                globalPlayer.maxHp = 75;
+                globalPlayer.gold = 0;
+                globalPlayer.dmg = 10;
+                globalPlayer.aspd = 0.5f;
+                globalPlayer.bspd = 9f;
+                globalPlayer.spd = 8f;
+                globalPlayer.initPosition = new Vector2(1, 1);
+
+                globalPlayer.difficulty = difficulty;
+                globalPlayer.caracter = caracter;
+
+                for (int i = 0; i <= 16; ++i)
+                {
+                    roomService.rooms[i] = false;
+                }
+
+                for (int i = 0; i <= 3; ++i)
+                {
+                    globalPlayer.items[i] = false;
+                }
             }
         }
         else if (textTransform.name == "Quit_Text")
