@@ -1,22 +1,40 @@
 fileFormatVersion: 2
-guid: 7349c9d9b37af47409720ddad7bb6d0f
+guid: c9d163f8af7fb0a46b5f1bf22229d79b
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 6501239073203264218
-    second: boss_legs
+    second: Horse_idle
   - first:
       213: -8550439040145237217
-    second: boss_idle
+    second: boss-sprites_1
   - first:
       213: -3438632117643643751
-    second: boss_arrow
+    second: Horse_run1
   - first:
       213: -9087739034666228703
-    second: boss_shoot1
+    second: Horse_run2
   - first:
       213: -2307612919195099813
-    second: boss_shoot2
+    second: Horse_run3
+  - first:
+      213: 1800639656895990580
+    second: Horse_run4
+  - first:
+      213: 2899367245945106838
+    second: Horse_run5
+  - first:
+      213: 1073413411353239751
+    second: tail0
+  - first:
+      213: 4070623300328177071
+    second: tail1
+  - first:
+      213: -6164946873174806821
+    second: tail2
+  - first:
+      213: 1050533953689602616
+    second: tail3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,15 +124,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boss_legs
+      name: Horse_idle
       rect:
         serializedVersion: 2
-        x: 56
-        y: 876
-        width: 49
+        x: 31
+        y: 415
+        width: 184
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -127,15 +145,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_idle
+      name: boss-sprites_1
       rect:
         serializedVersion: 2
-        x: 158
-        y: 871
-        width: 93
-        height: 75
+        x: 270
+        y: 415
+        width: 184
+        height: 64
       alignment: 9
-      pivot: {x: 0.25306767, y: 0.47349283}
+      pivot: {x: 0.44, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -148,15 +166,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_arrow
+      name: Horse_run1
       rect:
         serializedVersion: 2
-        x: 60
-        y: 832
-        width: 23
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 31
+        y: 313
+        width: 184
+        height: 64
+      alignment: 9
+      pivot: {x: 0.44, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,15 +187,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_shoot1
+      name: Horse_run2
       rect:
         serializedVersion: 2
-        x: 304
-        y: 868
-        width: 93
-        height: 75
+        x: 256
+        y: 312
+        width: 198
+        height: 64
       alignment: 9
-      pivot: {x: 0.25198692, y: 0.47296467}
+      pivot: {x: 0.48, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,15 +208,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_shoot2
+      name: Horse_run3
       rect:
         serializedVersion: 2
-        x: 447
-        y: 868
-        width: 93
-        height: 75
+        x: 7
+        y: 223
+        width: 209
+        height: 64
       alignment: 9
-      pivot: {x: 0.26371026, y: 0.47333172}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,6 +224,132 @@ TextureImporter:
       bones: []
       spriteID: b5d1648b646b9ffd0800000000000000
       internalID: -2307612919195099813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horse_run4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 217
+        width: 198
+        height: 64
+      alignment: 9
+      pivot: {x: 0.48, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b44cd4a382df810800000000000000
+      internalID: 1800639656895990580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horse_run5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 126
+        width: 208
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691f5ff062f9c3820800000000000000
+      internalID: 2899367245945106838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tail0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 79
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0a9d87fc785ee00800000000000000
+      internalID: 1073413411353239751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tail1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 58
+        width: 45
+        height: 15
+      alignment: 9
+      pivot: {x: 0.873, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad3d761352cd7830800000000000000
+      internalID: 4070623300328177071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tail2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 38
+        width: 46
+        height: 15
+      alignment: 9
+      pivot: {x: 0.873, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdea24d6b75b17aa0800000000000000
+      internalID: -6164946873174806821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tail3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 19
+        width: 46
+        height: 15
+      alignment: 9
+      pivot: {x: 0.873, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ac72e901f349e00800000000000000
+      internalID: 1050533953689602616
       vertices: []
       indices: 
       edges: []
