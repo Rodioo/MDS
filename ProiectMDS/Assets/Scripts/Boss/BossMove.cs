@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class BossMove : MonoBehaviour
 {
     private Transform player;
+    public GlobalStatus playerStatus;
+
 
     public int maxHp = 400;
+
     public int hp = 400;
     public int damage = 20;
 
@@ -40,6 +43,24 @@ public class BossMove : MonoBehaviour
 
     void Start()
     {
+        if (playerStatus.difficulty == 2)
+        {
+            hp += 100;
+            damage += 5;
+            speed += 2;
+            fireRate -= 0.2f;
+        }
+        else if (playerStatus.difficulty == 3)
+        {
+            hp += 200;
+            damage += 10;
+            speed += 4;
+            fireRate -= 0.4f;
+
+        }
+
+
+
         randomSpot = Random.Range(0, moveSpots.Length);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = this.GetComponent<Rigidbody2D>();

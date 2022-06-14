@@ -12,7 +12,7 @@ public class turret : MonoBehaviour
 
     public float shootingRange;
 
-    public float fireRate = 1f;
+    public float fireRate = 1.1f;
     private float nextFireTime;
 
     public GameObject bullet;
@@ -22,8 +22,8 @@ public class turret : MonoBehaviour
 
     private Transform player;
 
-    public int hp = 30;
-    public int damage = 20;
+    public int hp = 25;
+    public int damage = 25;
 
     private int turretGold;
 
@@ -37,13 +37,13 @@ public class turret : MonoBehaviour
         {
             hp += 5;
             damage += 5;
-            fireRate -= 0.2f;
+            fireRate -= 0.1f;
         }
         else if (playerStatus.difficulty == 3)
         {
             hp += 10;
             damage += 10;
-            fireRate -= 0.3f;
+            fireRate -= 0.1f;
         }
 
 

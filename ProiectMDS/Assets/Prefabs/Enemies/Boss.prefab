@@ -431,6 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4206d3d3542173f46a10ebe4d6d47f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStatus: {fileID: 11400000, guid: a8c4c3c7635261f47bf3d080c4771022, type: 2}
   hp: 200
   damage: 20
   fireRate: 1
