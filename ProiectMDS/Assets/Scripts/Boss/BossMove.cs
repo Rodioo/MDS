@@ -7,7 +7,8 @@ public class BossMove : MonoBehaviour
 {
     private Transform player;
 
-    public int hp = 200;
+    public int maxHp = 400;
+    public int hp = 400;
     public int damage = 20;
 
     public float fireRate = 1f;
@@ -30,6 +31,8 @@ public class BossMove : MonoBehaviour
 
     public GameObject ui;
     public GameObject gameWon;
+    public GameObject bossHealthUI;
+    private BossHealthScript bossHealthScript;
 
     public GlobalStatus playerStats;
 
@@ -42,13 +45,20 @@ public class BossMove : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         horse_rb = horse.GetComponent<Rigidbody2D>();
         body_rb = body.GetComponent<Rigidbody2D>();
+
+        bossHealthScript = bossHealthUI.GetComponent<BossHealthScript>();
+
+        bossHealthScript.setMaxHealth();
+        hp = maxHp;
     }
 
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
         if (phase == 1)
         {
-            if (hp <= 100 )
+            if (hp <= maxHp / 2 )
                 phase = 2;
 
             Vector2 horseDirection = moveSpots[randomSpot].position - transform.position;
@@ -103,9 +113,11 @@ public class BossMove : MonoBehaviour
         {
             int damage = getPlayerDamage(collision);
             hp -= damage;
+            bossHealthScript.setHealth();
             if (hp <= 0)
             {
                 ui.SetActive(false);
+                bossHealthUI.SetActive(false);
                 gameWon.SetActive(true);
                 Button menuButton = gameWon.transform.Find("MenuButton").gameObject.GetComponent<Button>();
 
@@ -115,6 +127,7 @@ public class BossMove : MonoBehaviour
             else
             {
                 ui.SetActive(true);
+                bossHealthUI.SetActive(true);
                 gameWon.SetActive(false);
             }
         }
