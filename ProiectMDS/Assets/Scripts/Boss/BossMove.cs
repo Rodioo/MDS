@@ -140,9 +140,8 @@ public class BossMove : MonoBehaviour
                 ui.SetActive(false);
                 bossHealthUI.SetActive(false);
                 gameWon.SetActive(true);
-                Button menuButton = gameWon.transform.Find("MenuButton").gameObject.GetComponent<Button>();
 
-                menuButton.onClick.AddListener(() => { playerStats.reset = true; });
+                playerStats.reset = true;
                 Destroy(gameObject);
             }
             else

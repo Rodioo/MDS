@@ -1771,9 +1771,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7255775529924469479, guid: 6ddb2a90379efc347b6f6d6f12b8929a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7255775529956000769, guid: 6ddb2a90379efc347b6f6d6f12b8929a, type: 3}
       propertyPath: m_Name
       value: BossUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7255775529956000769, guid: 6ddb2a90379efc347b6f6d6f12b8929a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7255775529956000773, guid: 6ddb2a90379efc347b6f6d6f12b8929a, type: 3}
       propertyPath: m_Pivot.x
