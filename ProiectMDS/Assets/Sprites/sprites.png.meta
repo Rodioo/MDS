@@ -107,6 +107,12 @@ TextureImporter:
   - first:
       213: -5647778350772032766
     second: turret_bullet
+  - first:
+      213: 286243765835191086
+    second: bandana1
+  - first:
+      213: -5113350760131414088
+    second: bandana2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -275,9 +281,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 287
-        width: 32
-        height: 51
+        y: 293
+        width: 38
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,10 +301,10 @@ TextureImporter:
       name: Ninja_2
       rect:
         serializedVersion: 2
-        x: 47
-        y: 286
-        width: 32
-        height: 51
+        x: 50
+        y: 293
+        width: 38
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -930,7 +936,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -938,6 +944,48 @@ TextureImporter:
       bones: []
       spriteID: 20b6710638f0f91b0800000000000000
       internalID: -5647778350772032766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bandana1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 272
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23d6cd3031f8f300800000000000000
+      internalID: 286243765835191086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bandana2
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 272
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b7b46a439ab909b0800000000000000
+      internalID: -5113350760131414088
       vertices: []
       indices: 
       edges: []
