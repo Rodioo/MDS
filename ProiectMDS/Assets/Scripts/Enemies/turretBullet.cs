@@ -33,7 +33,7 @@ public class turretBullet : MonoBehaviour
         //distToPlayer = Vector2.Distance(transform.position, player.position);
         //Vector2 moveDir = (target.transform.position - transform.position);
         //bulletRB.velocity = new Vector2(moveDir.x,moveDir.y);
-        Destroy(this.gameObject, 5);
+        Destroy(this.gameObject, 10);
     }
 
     void Update()
