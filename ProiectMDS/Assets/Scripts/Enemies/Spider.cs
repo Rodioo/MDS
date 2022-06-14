@@ -74,7 +74,7 @@ public class Spider : MonoBehaviour
 
     private void FixedUpdate()
     {
-        moveCharacter(movement);
+        //moveCharacter(movement);
     }
 
     void moveCharacter(Vector2 direction)
