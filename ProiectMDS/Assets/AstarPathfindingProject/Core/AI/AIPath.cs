@@ -329,7 +329,7 @@ namespace Pathfinding {
 				// (at least compared to a local variable)
 				simulatedPosition = tr.position;
 			}
-			if (updateRotation) simulatedRotation = tr.rotation;
+			if (updateRotation) simulatedRotation = tr.rotation; //* Quaternion.Euler(0, 0, 90);
 
 			var currentPosition = simulatedPosition;
 
