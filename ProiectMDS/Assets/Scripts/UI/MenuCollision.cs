@@ -12,10 +12,11 @@ public class MenuCollision : MonoBehaviour
     public static int difficulty = 1;
     public static int caracter = 1;
 
-
     public static void checkMenuHit(Collider2D col, GlobalStatus globalPlayer, RoomService roomService)
     {
         Transform textTransform = col.gameObject.transform.parent;
+        volume = globalPlayer.volume;
+        difficulty = globalPlayer.difficulty;
 
         //Main Menu Choices
 
@@ -30,6 +31,7 @@ public class MenuCollision : MonoBehaviour
             GameObject settingsMenu = textTransform.parent.parent.Find("SettingsMenu").gameObject;
             mainMenu.SetActive(false);
             settingsMenu.SetActive(true);
+            
         }
         //Settings Menu Choices
         else if (textTransform.name == "Volume-")
@@ -58,8 +60,7 @@ public class MenuCollision : MonoBehaviour
         }
         else if (textTransform.name == "Difficulty-")
         {
-            TextMeshProUGUI difficultyText = textTransform.parent.Find("DifficultyText")
-                .gameObject.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI difficultyText = textTransform.parent.Find("DifficultyText").gameObject.GetComponent<TextMeshProUGUI>();
             difficulty = Int32.Parse(difficultyText.text.Split(':')[1]);
             if (difficulty > 1)
                 difficulty--;
@@ -77,7 +78,6 @@ public class MenuCollision : MonoBehaviour
                 difficulty ++ ;
 
             difficultyText.text = "Difficulty:" + difficulty;
-
             globalPlayer.difficulty = difficulty;
         }
 
