@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBarScript : MonoBehaviour
+public class BossHealthScript : MonoBehaviour
 {
     public Slider slider;
-    public GlobalStatus playerStats;
+    public BossMove bossScript;
 
     private void Start()
     {
@@ -15,12 +15,12 @@ public class HealthBarScript : MonoBehaviour
 
     public void setMaxHealth()
     {
-        slider.maxValue = playerStats.maxHp;
-        slider.value = playerStats.hp;
+        slider.maxValue = bossScript.maxHp;
+        slider.value = bossScript.maxHp;
     }
 
     public void setHealth()
     {
-        slider.value = playerStats.hp;
+        slider.value = bossScript.hp;
     }
 }

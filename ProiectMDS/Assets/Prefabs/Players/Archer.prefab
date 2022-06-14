@@ -177,6 +177,7 @@ MonoBehaviour:
   healthBarScript: {fileID: 3029481378199442986, guid: 75e26e1f6a5c37a438c2dfe8f1193645, type: 3}
   currencyScript: {fileID: 7930065801039590733, guid: b118778271a5d884e8f6f0932135671f, type: 3}
   gameOver: {fileID: 7802994559696077989, guid: 87b41901da71f594e9c2a4e2bbc6474e, type: 3}
+  bossHealthUI: {fileID: 7255775529956000769, guid: 6ddb2a90379efc347b6f6d6f12b8929a, type: 3}
 --- !u!70 &-7907553358557110698
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     public CurrencyScript currencyScript;
 
     public GameObject gameOver;
+    public GameObject bossHealthUI;
 
     private void Start()
     {
@@ -37,6 +38,14 @@ public class Player : MonoBehaviour
             transform.position = new Vector2 (-4,0);
         }
 
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            transform.position = new Vector2(-4, 0);
+
+            float scaledVolume = playerStats.volume / 10f;
+            PlayerPrefs.SetFloat("volume", scaledVolume);
+            AudioListener.volume = PlayerPrefs.GetFloat("volume");
+        }
 
         if (playerStats.caracter == 1 && gameObject.name == "Ninja")
         {
@@ -138,12 +147,14 @@ public class Player : MonoBehaviour
             }
             if(playerStats.hp <= 0)
             {
+                bossHealthUI.SetActive(false);
                 gameOver.SetActive(true);
                 Button menuButton = gameOver.transform.Find("MenuButton").gameObject.GetComponent<Button>();
                 menuButton.onClick.AddListener(() => { playerStats.reset = true; });
             }
             else
             {
+                bossHealthUI.SetActive(true);
                 gameOver.SetActive(false);
             }
         }
@@ -161,12 +172,14 @@ public class Player : MonoBehaviour
             }
             if (playerStats.hp <= 0)
             {
+                bossHealthUI.SetActive(false);
                 gameOver.SetActive(true);
                 Button menuButton = gameOver.transform.Find("MenuButton").gameObject.GetComponent<Button>();
                 menuButton.onClick.AddListener(() => { playerStats.reset = true; });
             }
             else
             {
+                bossHealthUI.SetActive(true);
                 gameOver.SetActive(false);
             }
         }
