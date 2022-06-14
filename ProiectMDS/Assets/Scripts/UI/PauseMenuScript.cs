@@ -43,7 +43,7 @@ public class PauseMenuScript : MonoBehaviour
     {
         Destroy(GameObject.FindGameObjectWithTag("Music"));
         resumeGame();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void quitGame()

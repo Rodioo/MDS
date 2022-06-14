@@ -151,6 +151,7 @@ public class MenuCollision : MonoBehaviour
             if (caracter == 2)
             {
                 globalPlayer.ninjaStats();
+                globalPlayer.reset = false;
 
 
                 for (int i = 0; i <= 16; ++i)

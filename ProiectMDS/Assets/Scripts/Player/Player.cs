@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public GlobalStatus playerStats;
+    public RoomService roomStats;
 
     public float moveSpeed = 3f;
 
@@ -33,10 +34,6 @@ public class Player : MonoBehaviour
     {
         transform.position = playerStats.initPosition;
 
-        if (SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            transform.position = new Vector2 (-4,0);
-        }
 
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
@@ -200,4 +197,9 @@ public class Player : MonoBehaviour
             }
         }
     }
+    public void OnApplicationQuit()
+    {
+        SaveSystem.Save(playerStats, roomStats);
+    }
+
 }
