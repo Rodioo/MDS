@@ -17,10 +17,10 @@ Proiectul consta in dezvoltarea unui joc 2D de tip roguelike in Unity.
   - [Commits](https://github.com/Rodioo/MDS/commits/master)
   - [Branching](https://github.com/Rodioo/MDS/branches)
   - [Pull Requests](https://github.com/Rodioo/MDS/pulls?q=is%3Apr+is%3Aclosed)
-- Unit testing: In progress
+- [Unit testing](https://github.com/Rodioo/MDS/tree/master/ProiectMDS/Assets/Tests)
 - [Bug reporting](https://github.com/Rodioo/MDS/issues)
 - Build tool-ul folosit este Unity.
-- Design patterns: In progress
+- Design patterns: N/A
 - Pentru refactoring si code standards am incercat sa respectam [best practices](https://unity.com/how-to/organizing-your-project) pentru organizarea unui proiect in Unity.
   
   ![](https://i.imgur.com/g6FtbY6.png "Exemplu de structurare a folderelor din proiect")
