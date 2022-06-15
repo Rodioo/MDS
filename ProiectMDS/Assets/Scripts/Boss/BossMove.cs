@@ -77,38 +77,32 @@ public class BossMove : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        if (phase == 1)
+        Vector2 horseDirection = moveSpots[randomSpot].position - transform.position;
+        Vector2 bodyDirection = player.position - transform.position;
+
+        float angle = Mathf.Atan2(bodyDirection.y, bodyDirection.x) * Mathf.Rad2Deg;
+        body_rb.rotation = angle;
+
+        float horseAngle = Mathf.Atan2(horseDirection.y, horseDirection.x) * Mathf.Rad2Deg;
+        rb.rotation = horseAngle;
+        horse_rb.rotation = horseAngle;
+
+        transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
+        horse.transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
+        body.transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
+
+        if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.5f)
+            randomSpot = Random.Range(0, moveSpots.Length);
+
+        if (nextFireTime > Time.time && nextFireTime < Time.time + 0.2f)
         {
-            if (hp <= maxHp / 2 )
-                phase = 2;
-
-            Vector2 horseDirection = moveSpots[randomSpot].position - transform.position;
-            Vector2 bodyDirection = player.position - transform.position;
-
-            float angle = Mathf.Atan2(bodyDirection.y, bodyDirection.x) * Mathf.Rad2Deg;
-            body_rb.rotation = angle;
-
-            float horseAngle = Mathf.Atan2(horseDirection.y, horseDirection.x) * Mathf.Rad2Deg;
-            rb.rotation = horseAngle;
-            horse_rb.rotation = horseAngle;
-
-            transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
-            horse.transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
-            body.transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed * Time.deltaTime);
-
-            if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.5f)
-                randomSpot = Random.Range(0, moveSpots.Length);
-
-            if (nextFireTime > Time.time && nextFireTime < Time.time + 0.2f)
-            {
-                animator.SetBool("isShooting", true);
-            }
-            else if (nextFireTime < Time.time)
-            {
-                Instantiate(bullet, bulletParent.transform.position, bulletParent.transform.rotation);
-                nextFireTime = Time.time + fireRate;
-                animator.SetBool("isShooting", false);
-            }
+            animator.SetBool("isShooting", true);
+        }
+        else if (nextFireTime < Time.time)
+        {
+            Instantiate(bullet, bulletParent.transform.position, bulletParent.transform.rotation);
+            nextFireTime = Time.time + fireRate;
+            animator.SetBool("isShooting", false);
         }
     }
 

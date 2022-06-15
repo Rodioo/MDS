@@ -1656,7 +1656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2319689436588284850, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
       propertyPath: m_Offset.x
-      value: -0.16
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 1336626642, guid: cf966481313cc3d479bd9e8d7ca06875, type: 3}
       propertyPath: m_SortingOrder
