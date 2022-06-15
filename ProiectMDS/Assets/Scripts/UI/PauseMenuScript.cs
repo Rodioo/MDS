@@ -32,7 +32,7 @@ public class PauseMenuScript : MonoBehaviour
         isPaused = false;
     }
 
-    private void pauseGame()
+    public void pauseGame()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;

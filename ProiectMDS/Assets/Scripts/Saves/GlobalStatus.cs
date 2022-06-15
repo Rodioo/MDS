@@ -16,9 +16,9 @@ public class GlobalStatus : ScriptableObject
     public float spd = 3f;
     public bool[] items = new bool[4];
     
-    public int volume = MenuCollision.volume;
+    public int volume = 5;
 
-    public int difficulty = MenuCollision.difficulty;
+    public int difficulty = 1;
 
     public int caracter = 1;
 

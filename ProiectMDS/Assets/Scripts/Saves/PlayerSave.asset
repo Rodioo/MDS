@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: PlayerSave
   m_EditorClassIdentifier: 
   reset: 0
-  initPosition: {x: 1.15, y: -6}
+  initPosition: {x: -15.4, y: 1.15}
   hp: 75
-  maxHp: 100
+  maxHp: 75
   gold: 0
-  dmg: 15
-  aspd: 0.85
-  bspd: 7
-  spd: 6
-  items: 00000000
+  dmg: 10
+  aspd: 0.6
+  bspd: 9
+  spd: 14
+  items: 00010000
   volume: 2
   difficulty: 2
-  caracter: 1
+  caracter: 2
