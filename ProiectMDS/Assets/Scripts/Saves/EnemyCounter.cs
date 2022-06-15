@@ -17,8 +17,10 @@ public class EnemyCounter : MonoBehaviour
 
         var turretVector = GameObject.FindGameObjectsWithTag("turret");
 
+        var bossVector = GameObject.FindGameObjectsWithTag("Boss");
+
         if (spiderVector.Length == 0  && shooterVector.Length == 0 &&
-            turretVector.Length == 0)
+            turretVector.Length == 0 && bossVector.Length == 0)
         {
             nr = 0;
             // enemy camera 1 == 0;
