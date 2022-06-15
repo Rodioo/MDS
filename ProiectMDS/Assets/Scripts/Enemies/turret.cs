@@ -50,7 +50,7 @@ public class turret : MonoBehaviour
         if (roomService.rooms[SceneManager.GetActiveScene().buildIndex])
         {
             Destroy(gameObject);
-            Debug.Log("ghe");
+            //Debug.Log("ghe");
         }
 
         //nextFireTime = Time.time + fireRate;
