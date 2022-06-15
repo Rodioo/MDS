@@ -24,4 +24,5 @@ Proiectul consta in dezvoltarea unui joc 2D de tip roguelike in Unity.
 - Pentru refactoring si code standards am incercat sa respectam [best practices](https://unity.com/how-to/organizing-your-project) pentru organizarea unui proiect in Unity.
   
   ![](https://i.imgur.com/g6FtbY6.png "Exemplu de structurare a folderelor din proiect")
+  
 [Link Demo](https://youtu.be/9paT4BsYcQA)
